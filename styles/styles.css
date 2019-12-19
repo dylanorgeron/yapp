@@ -10,4 +10,8 @@
 .color-header .color-cell{
     margin-right: -4px;
     cursor: pointer;
+    height: 28px;
+    padding: 0;
+    width: 70px;
+    margin-bottom: -4px;
 }

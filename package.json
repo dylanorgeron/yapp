@@ -19,6 +19,7 @@
   "homepage": "https://github.com/dylanorgeron/canvashopper#readme",
   "dependencies": {
     "@types/jquery": "^3.3.31",
+    "colorthief": "^2.3.0",
     "eventemitter3": "^3.0.1",
     "parcel-bundler": "^1.5.1",
     "postcss-cssnext": "^3.1.0",

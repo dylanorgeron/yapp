@@ -1,3 +1,5 @@
+import ColorThief from 'colorthief'
+
 let colors = [
     '#002b36',
     '#073642',
@@ -27,7 +29,6 @@ function generateTable() {
             id="header-${index}"
             class="color-cell" 
             style="background: ${bgColor};color: ${bgColor}">
-            ${bgColor}
             </div>
             <input style="display:none" type="color" id="input-${index}" value="${bgColor}"/>`
         tableCoreHtml +=
