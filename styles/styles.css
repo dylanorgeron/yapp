@@ -4,4 +4,10 @@
 .color-cell{
     display: inline-block;
     padding: 5px;
+    width: 60px;
+    text-align: center;
+}
+.color-header .color-cell{
+    margin-right: -4px;
+    cursor: pointer;
 }
