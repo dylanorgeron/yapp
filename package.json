@@ -1,0 +1,28 @@
+{
+  "name": "canvashopper",
+  "version": "1.0.0",
+  "description": "html5 platformer",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build index.html",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanorgeron/canvashopper.git"
+  },
+  "author": "dylan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanorgeron/canvashopper/issues"
+  },
+  "homepage": "https://github.com/dylanorgeron/canvashopper#readme",
+  "dependencies": {
+    "@types/jquery": "^3.3.31",
+    "eventemitter3": "^3.0.1",
+    "parcel-bundler": "^1.5.1",
+    "postcss-cssnext": "^3.1.0",
+    "typescript": "^2.7.1",
+    "yarn": "^1.12.3"
+  }
+}

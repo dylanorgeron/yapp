@@ -1,0 +1,7 @@
+.color-row{
+    display: inline-block;
+}
+.color-cell{
+    display: inline-block;
+    padding: 5px;
+}
