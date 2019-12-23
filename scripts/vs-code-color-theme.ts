@@ -3,7 +3,7 @@ class VSCodeColorTheme {
     public name = "foobar"
     public type = "dark"
     public colors = {
-        "editor.background": "#0000ff",
+        "editor.background": "#333333",
         "editor.foreground": "#eeffff",
         "activityBarBadge.background": "#007acc",
         "sideBarTitle.foreground": "#bbbbbb"
