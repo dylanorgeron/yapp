@@ -25,7 +25,7 @@
     "eventemitter3": "^3.0.1",
     "file-saver": "^2.0.2",
     "jszip": "^3.2.2",
-    "parcel-bundler": "^1.5.1",
+    "parcel-bundler": "^1.10.0",
     "postcss-cssnext": "^3.1.0",
     "typescript": "^2.7.1",
     "yarn": "^1.12.3"
