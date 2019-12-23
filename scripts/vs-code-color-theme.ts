@@ -1,6 +1,6 @@
 
 class VSCodeColorTheme {
-    public name = "foobar"
+    public name = "Yapp Theme"
     public type = "dark"
     public colors = {
         "editor.background": "#333333",
