@@ -3,10 +3,10 @@ class VSCodeColorTheme {
     public name = "Yapp Theme"
     public type = "dark"
     public colors = {
-        "editor.background": "#333333",
-        "editor.foreground": "#eeffff",
-        "activityBarBadge.background": "#007acc",
-        "sideBarTitle.foreground": "#bbbbbb"
+        "editor.background": "color00",
+        "editor.foreground": "color05",
+        "activityBarBadge.background": "color01",
+        "sideBarTitle.foreground": "color02"
     }
     public tokenColors = [
         {
@@ -17,7 +17,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#546E7A"
+                "foreground": "color03"
             }
         },
         {
@@ -27,7 +27,7 @@ class VSCodeColorTheme {
                 "string constant.other.placeholder"
             ],
             "settings": {
-                "foreground": "#EEFFFF"
+                "foreground": "color05"
             }
         },
         {
@@ -36,7 +36,7 @@ class VSCodeColorTheme {
                 "constant.other.color"
             ],
             "settings": {
-                "foreground": "#ffffff"
+                "foreground": "color07"
             }
         },
         {
@@ -46,7 +46,7 @@ class VSCodeColorTheme {
                 "invalid.illegal"
             ],
             "settings": {
-                "foreground": "#FF5370"
+                "foreground": "color08"
             }
         },
         {
@@ -57,7 +57,7 @@ class VSCodeColorTheme {
                 "storage.modifier"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -77,7 +77,7 @@ class VSCodeColorTheme {
                 "keyword.other.substitution"
             ],
             "settings": {
-                "foreground": "#89DDFF"
+                "foreground": "color08"
             }
         },
         {
@@ -88,7 +88,7 @@ class VSCodeColorTheme {
                 "markup.deleted.git_gutter"
             ],
             "settings": {
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -101,7 +101,7 @@ class VSCodeColorTheme {
                 "keyword.other.special-method"
             ],
             "settings": {
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -110,7 +110,7 @@ class VSCodeColorTheme {
                 "meta.block variable.other"
             ],
             "settings": {
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -120,7 +120,7 @@ class VSCodeColorTheme {
                 "string.other.link"
             ],
             "settings": {
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -136,7 +136,7 @@ class VSCodeColorTheme {
                 "keyword.other"
             ],
             "settings": {
-                "foreground": "#F78C6C"
+                "foreground": "color13"
             }
         },
         {
@@ -151,7 +151,7 @@ class VSCodeColorTheme {
                 "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
             ],
             "settings": {
-                "foreground": "#C3E88D"
+                "foreground": "color11"
             }
         },
         {
@@ -167,7 +167,7 @@ class VSCodeColorTheme {
                 "support.type.sys-types"
             ],
             "settings": {
-                "foreground": "#FFCB6B"
+                "foreground": "color10"
             }
         },
         {
@@ -176,7 +176,7 @@ class VSCodeColorTheme {
                 "support.type"
             ],
             "settings": {
-                "foreground": "#B2CCD6"
+                "foreground": "color10"
             }
         },
         {
@@ -190,7 +190,7 @@ class VSCodeColorTheme {
                 "source.postcss support.type.property-name"
             ],
             "settings": {
-                "foreground": "#B2CCD6"
+                "foreground": "color10"
             }
         },
         {
@@ -201,7 +201,7 @@ class VSCodeColorTheme {
                 "variable.other.class.js"
             ],
             "settings": {
-                "foreground": "#FF5370"
+                "foreground": "color08"
             }
         },
         {
@@ -211,7 +211,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#FF5370"
+                "foreground": "color08"
             }
         },
         {
@@ -221,7 +221,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -231,7 +231,7 @@ class VSCodeColorTheme {
                 "variable.function.constructor"
             ],
             "settings": {
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -240,7 +240,7 @@ class VSCodeColorTheme {
                 "entity.other.attribute-name"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -251,7 +251,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#FFCB6B"
+                "foreground": "color10"
             }
         },
         {
@@ -260,7 +260,7 @@ class VSCodeColorTheme {
                 "entity.other.attribute-name.class"
             ],
             "settings": {
-                "foreground": "#FFCB6B"
+                "foreground": "color10"
             }
         },
         {
@@ -269,7 +269,7 @@ class VSCodeColorTheme {
                 "source.sass keyword.control"
             ],
             "settings": {
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -278,7 +278,7 @@ class VSCodeColorTheme {
                 "markup.inserted"
             ],
             "settings": {
-                "foreground": "#C3E88D"
+                "foreground": "color11"
             }
         },
         {
@@ -287,7 +287,7 @@ class VSCodeColorTheme {
                 "markup.deleted"
             ],
             "settings": {
-                "foreground": "#FF5370"
+                "foreground": "color08"
             }
         },
         {
@@ -296,7 +296,7 @@ class VSCodeColorTheme {
                 "markup.changed"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -305,7 +305,7 @@ class VSCodeColorTheme {
                 "string.regexp"
             ],
             "settings": {
-                "foreground": "#89DDFF"
+                "foreground": "color08"
             }
         },
         {
@@ -314,7 +314,7 @@ class VSCodeColorTheme {
                 "constant.character.escape"
             ],
             "settings": {
-                "foreground": "#89DDFF"
+                "foreground": "color08"
             }
         },
         {
@@ -336,7 +336,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -346,7 +346,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#FF5370"
+                "foreground": "color08"
             }
         },
         {
@@ -355,7 +355,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -364,7 +364,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#FFCB6B"
+                "foreground": "color10"
             }
         },
         {
@@ -373,7 +373,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#F78C6C"
+                "foreground": "color13"
             }
         },
         {
@@ -382,7 +382,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#FF5370"
+                "foreground": "color08"
             }
         },
         {
@@ -391,7 +391,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#C17E70"
+                "foreground": "color08"
             }
         },
         {
@@ -400,7 +400,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -409,7 +409,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -418,7 +418,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -427,7 +427,7 @@ class VSCodeColorTheme {
                 "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#C3E88D"
+                "foreground": "color11"
             }
         },
         {
@@ -437,7 +437,7 @@ class VSCodeColorTheme {
                 "punctuation.definition.list_item.markdown"
             ],
             "settings": {
-                "foreground": "#EEFFFF"
+                "foreground": "color5"
             }
         },
         {
@@ -446,7 +446,7 @@ class VSCodeColorTheme {
                 "text.html.markdown markup.inline.raw.markdown"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -455,7 +455,7 @@ class VSCodeColorTheme {
                 "text.html.markdown markup.inline.raw.markdown punctuation.definition.raw.markdown"
             ],
             "settings": {
-                "foreground": "#65737E"
+                "foreground": "color03"
             }
         },
         {
@@ -466,7 +466,7 @@ class VSCodeColorTheme {
                 "markup.heading.markdown punctuation.definition.heading.markdown"
             ],
             "settings": {
-                "foreground": "#C3E88D"
+                "foreground": "color11"
             }
         },
         {
@@ -476,7 +476,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "italic",
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -487,7 +487,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -502,7 +502,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#f07178"
+                "foreground": "color09"
             }
         },
         {
@@ -512,7 +512,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "underline",
-                "foreground": "#F78C6C"
+                "foreground": "color13"
             }
         },
         {
@@ -521,7 +521,7 @@ class VSCodeColorTheme {
                 "markup.quote punctuation.definition.blockquote.markdown"
             ],
             "settings": {
-                "foreground": "#65737E"
+                "foreground": "color03"
             }
         },
         {
@@ -539,7 +539,7 @@ class VSCodeColorTheme {
                 "string.other.link.title.markdown"
             ],
             "settings": {
-                "foreground": "#82AAFF"
+                "foreground": "color12"
             }
         },
         {
@@ -548,7 +548,7 @@ class VSCodeColorTheme {
                 "string.other.link.description.title.markdown"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -557,7 +557,7 @@ class VSCodeColorTheme {
                 "constant.other.reference.link.markdown"
             ],
             "settings": {
-                "foreground": "#FFCB6B"
+                "foreground": "color10"
             }
         },
         {
@@ -566,7 +566,7 @@ class VSCodeColorTheme {
                 "markup.raw.block"
             ],
             "settings": {
-                "foreground": "#C792EA"
+                "foreground": "color14"
             }
         },
         {
@@ -575,7 +575,7 @@ class VSCodeColorTheme {
                 "markup.raw.block.fenced.markdown"
             ],
             "settings": {
-                "foreground": "#00000050"
+                "foreground": "color03"
             }
         },
         {
@@ -584,7 +584,7 @@ class VSCodeColorTheme {
                 "punctuation.definition.fenced.markdown"
             ],
             "settings": {
-                "foreground": "#00000050"
+                "foreground": "color03"
             }
         },
         {
@@ -595,7 +595,7 @@ class VSCodeColorTheme {
                 "punctuation.section.class.end"
             ],
             "settings": {
-                "foreground": "#EEFFFF"
+                "foreground": "color5"
             }
         },
         {
@@ -604,7 +604,7 @@ class VSCodeColorTheme {
                 "variable.language.fenced.markdown"
             ],
             "settings": {
-                "foreground": "#65737E"
+                "foreground": "color03"
             }
         },
         {
@@ -614,7 +614,7 @@ class VSCodeColorTheme {
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#65737E"
+                "foreground": "color03"
             }
         },
         {
@@ -623,7 +623,7 @@ class VSCodeColorTheme {
                 "markup.table"
             ],
             "settings": {
-                "foreground": "#EEFFFF"
+                "foreground": "color5"
             }
         }
     ]
