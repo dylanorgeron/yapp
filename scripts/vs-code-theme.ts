@@ -5,9 +5,9 @@ import Package from './vs-code-package'
 import ColorTheme from './vs-code-color-theme'
 
 class VSCodeTheme{
-    public exportTheme(){
+    public exportTheme(colors: string[]){
         let themePackage = new Package()
-        let themeColors = new ColorTheme()
+        let themeColors = new ColorTheme("yapp-theme", "dark", colors)
         //transform theme json for export
 
         //convert to base64 for export

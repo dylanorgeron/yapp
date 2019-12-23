@@ -30,5 +30,5 @@ colorTable.generateTable(colors)
 const vsCodeTheme = new VSCodeTheme()
 const vsCodeExportBtn = document.getElementById('vs-code-export-btn')
 if(vsCodeExportBtn) vsCodeExportBtn.addEventListener('click', () => {
-    vsCodeTheme.exportTheme()
+    vsCodeTheme.exportTheme(colors)
 })
