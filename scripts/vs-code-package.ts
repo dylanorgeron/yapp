@@ -12,7 +12,7 @@ class Package {
     public contributes = {
         "themes": [
             {
-                "label": "foobar",
+                "label": "yapp-theme",
                 "uiTheme": "vs-dark",
                 "path": "./themes/foobar-color-theme.json"
             }

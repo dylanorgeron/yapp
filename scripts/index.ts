@@ -3,6 +3,7 @@ import ColorTable from './color-table'
 import VSCodeTheme from './vs-code-theme'
 
 //initial palette
+//lioness
 let colors = [
     '#121920',
     '#121E28',
@@ -20,6 +21,26 @@ let colors = [
     '#B08664',
     '#E8DEAE',
     '#646963'
+]
+
+//solarized
+colors = [
+    '#002b36',
+    '#073642',
+    '#586e75',
+    '#657b83',
+    '#839496',
+    '#93a1a1',
+    '#eee8d5',
+    '#fdf6e3',
+    '#b58900',
+    '#cb4b16',
+    '#d30102',
+    '#d33682',
+    '#6c71c4',
+    '#268bd2',
+    '#2aa198',
+    '#859900'
 ]
 
 //build table

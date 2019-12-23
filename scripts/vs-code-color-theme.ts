@@ -629,9 +629,7 @@ class VSCodeColorTheme {
     ]
 
     constructor(name: string, type: string, colors: string[]){
-        this.name = name
-        this.type = type
-        this.colors["editor.background"] = colors[0]
+        
     }
 }
 

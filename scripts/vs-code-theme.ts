@@ -12,7 +12,12 @@ class VSCodeTheme{
 
         //convert to base64 for export
         const packageString = btoa(JSON.stringify(themePackage))
-        const themeString = btoa(JSON.stringify(themeColors))
+        let themeString = JSON.stringify(themeColors)
+        colors.forEach((color, index) => {
+            const colorToReplace = index < 10 ? `color0${index}` : `color${index}`
+            themeString = themeString.replace(colorToReplace, colors[index])
+        });
+        themeString = btoa(themeString)
         const zip = new JSZip()
         zip.file('package.json', packageString, {base64: true})
         const themesFolder = zip.folder('themes')
