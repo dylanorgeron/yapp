@@ -1,5 +1,6 @@
 // import ColorThief from 'colorthief'
 import ColorTable from './color-table'
+import VSCodeTheme from './vs-code-theme'
 
 //initial palette
 let colors = [
@@ -24,3 +25,10 @@ let colors = [
 //build table
 const colorTable = new ColorTable()
 colorTable.generateTable(colors)
+
+//click events
+const vsCodeTheme = new VSCodeTheme()
+const vsCodeExportBtn = document.getElementById('vs-code-export-btn')
+if(vsCodeExportBtn) vsCodeExportBtn.addEventListener('click', () => {
+    vsCodeTheme.exportTheme()
+})
