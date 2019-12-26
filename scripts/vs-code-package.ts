@@ -18,6 +18,10 @@ class Package {
             }
         ]
     }
+    constructor(name: string){
+        this.name = name
+        this.displayName = name
+    }
 }
 
 export default Package

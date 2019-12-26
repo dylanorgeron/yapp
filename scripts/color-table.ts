@@ -8,7 +8,8 @@ class ColorTable{
                 `<div 
                 id="header-${index}"
                 class="color-cell" 
-                style="background: ${bgColor};color: ${bgColor}">
+                style="background: ${bgColor};color: white">
+                ${index}
                 </div>
                 <input style="display:none" type="color" id="input-${index}" value="${bgColor}"/>`
             tableCoreHtml +=
@@ -20,7 +21,10 @@ class ColorTable{
             tableCoreHtml += `</div>`
         })
         tableHeaderHtml += `</div>`
-        if (table) table.innerHTML = tableHeaderHtml + tableCoreHtml
+        if (table){
+            table.innerHTML = tableHeaderHtml + tableCoreHtml  
+            table.style.backgroundColor = colors[0]
+        } 
         for (let i = 0; i < 16; i++) {
             const headerEl = document.getElementById(`header-${i.toString()}`)
             if (headerEl) {
