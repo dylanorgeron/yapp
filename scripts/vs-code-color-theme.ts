@@ -1,358 +1,585 @@
 class VSCodeColorTheme {
   name = 'Yapp Theme v2'
   type = 'dark'
-  colors = {
-    "focusBorder": "color09",
-    "foreground": "color05",
-    "widget.shadow": "#000000",
-    "selection.background": "color15",
-    "errorForeground": "color05",
-    "button.background": "color01",
-    "button.foreground": "color05",
-    "button.hoverBackground": "color07",
-    "dropdown.background": "color08",
-    "dropdown.border": "color08",
-    "dropdown.foreground": "color12",
-    "input.background": "color08",
-    "input.border": "color08",
-    "input.foreground": "color12",
-    "input.placeholderForeground": "color15",
-    "inputOption.activeBorder": "color10",
-    "inputValidation.errorBackground": "color08",
-    "inputValidation.errorBorder": "color05",
-    "inputValidation.infoBackground": "color08",
-    "inputValidation.infoBorder": "#333333",
-    "inputValidation.warningBackground": "color08",
-    "inputValidation.warningBorder": "color06",
-    "scrollbar.shadow": "color00",
-    "scrollbarSlider.activeBackground": "color04",
-    "scrollbarSlider.background": "color03",
-    "scrollbarSlider.hoverBackground": "#333333",
-    "badge.foreground": "color05",
-    "badge.background": "color09",
-    "progressBar.background": "#333333",
-    "list.activeSelectionBackground": "color07",
-    "list.activeSelectionForeground": "color05",
-    "list.dropBackground": "color03",
-    "list.focusBackground": "color03",
-    "list.highlightForeground": "color13",
-    "list.hoverBackground": "color08",
-    "list.inactiveSelectionBackground": "color08",
-    "list.inactiveSelectionForeground": "color05",
-    "list.hoverForeground": "color04",
-    "list.focusForeground": "color00",
-    "activityBar.background": "color00",
-    "activityBar.dropBackground": "color08",
-    "activityBar.foreground": "color04",
-    "activityBar.border": "color00",
-    "activityBarBadge.background": "color09",
-    "activityBarBadge.foreground": "color00",
-    "sideBar.background": "color00",
-    "sideBar.foreground": "color12",
-    "sideBar.border": "color08",
-    "sideBarTitle.foreground": "color04",
-    "sideBarSectionHeader.background": "color15",
-    "sideBarSectionHeader.foreground": "color12",
-    "editorPane.background": "color00",
-    "editorGroup.emptyBackground": "color00",
-    "editorGroup.border": "color08",
-    "editorGroup.focusedEmptyBorder": "color08",
-    "editorGroup.dropBackground": "color15",
-    "editorGroupHeader.noTabsBackground": "color00",
-    "editorGroupHeader.tabsBackground": "color00",
-    "editorGroupHeader.tabsBorder": "color00",
-    "tab.activeBackground": "color08",
-    "tab.activeForeground": "color04",
-    "tab.border": "color00",
-    "tab.inactiveBackground": "color00",
-    "tab.inactiveForeground": "#333333",
-    "tab.unfocusedActiveForeground": "color03",
-    "tab.unfocusedInactiveForeground": "color15",
-    "editor.background": "color00",
-    "editor.foreground": "color05",
-    "editorLineNumber.foreground": "color15",
-    "editorCursor.foreground": "color09",
-    "editor.selectionBackground": "#333333",
-    "editor.selectionHighlightBackground": "color08",
-    "editor.inactiveSelectionBackground": "#333333",
-    "editor.wordHighlightBackground": "color09",
-    "editor.wordHighlightStrongBackground": "color14",
-    "editor.findMatchBackground": "color13",
-    "editor.findMatchHighlightBackground": "color13",
-    "editor.findRangeHighlightBackground": "color08",
-    "editor.hoverHighlightBackground": "color15",
-    "editor.lineHighlightBackground": "color00",
-    "editor.lineHighlightBorder": "color08",
-    "editorLink.activeForeground": "color10",
-    "editor.rangeHighlightBackground": "color08",
-    "editorWhitespace.foreground": "color08",
-    "editorIndentGuide.background": "color08",
-    "editorIndentGuide.activeBackground": "color15",
-    "editorRuler.foreground": "color08",
-    "editorCodeLens.foreground": "color04",
-    "editorBracketMatch.background": "color08",
-    "editorBracketMatch.border": "color08",
-    "editorOverviewRuler.border": "color08",
-    "editorOverviewRuler.findMatchForeground": "color13",
-    "editorOverviewRuler.rangeHighlightForeground": "color15",
-    "editorOverviewRuler.selectionHighlightForeground": "color08",
-    "editorOverviewRuler.wordHighlightForeground": "color15",
-    "editorOverviewRuler.wordHighlightStrongForeground": "color03",
-    "editorOverviewRuler.modifiedForeground": "color13",
-    "editorOverviewRuler.addedForeground": "color11",
-    "editorOverviewRuler.deletedForeground": "color05",
-    "editorOverviewRuler.errorForeground": "color05",
-    "editorOverviewRuler.warningForeground": "color06",
-    "editorOverviewRuler.infoForeground": "#333333",
-    "editorError.foreground": "color05",
-    "editorError.border": "color05",
-    "editorWarning.foreground": "color06",
-    "editorWarning.border": "color12",
-    "editorGutter.background": "color00",
-    "editorGutter.modifiedBackground": "color13",
-    "editorGutter.addedBackground": "color11",
-    "editorGutter.deletedBackground": "color05",
-    "diffEditor.insertedTextBackground": "color11",
-    "diffEditor.removedTextBackground": "color05",
-    "editorWidget.background": "color08",
-    "editorWidget.border": "color08",
-    "editorSuggestWidget.background": "color08",
-    "editorSuggestWidget.border": "color08",
-    "editorSuggestWidget.foreground": "color12",
-    "editorSuggestWidget.highlightForeground": "color14",
-    "editorSuggestWidget.selectedBackground": "color15",
-    "editorHoverWidget.background": "color08",
-    "editorHoverWidget.border": "color08",
-    "debugExceptionWidget.background": "color08",
-    "debugExceptionWidget.border": "color08",
-    "editorMarkerNavigation.background": "color08",
-    "editorMarkerNavigationError.background": "color05",
-    "editorMarkerNavigationWarning.background": "color06",
-    "peekView.border": "color14",
-    "peekViewEditor.background": "color08",
-    "peekViewEditorGutter.background": "color08",
-    "peekViewEditor.matchHighlightBackground": "color13",
-    "peekViewResult.background": "color08",
-    "peekViewResult.fileForeground": "color12",
-    "peekViewResult.lineForeground": "color15",
-    "peekViewResult.matchHighlightBackground": "color13",
-    "peekViewResult.selectionBackground": "color03",
-    "peekViewResult.selectionForeground": "color05",
-    "peekViewTitle.background": "color15",
-    "peekViewTitleDescription.foreground": "color04",
-    "peekViewTitleLabel.foreground": "color05",
-    "merge.currentHeaderBackground": "color10",
-    "merge.currentContentBackground": "color10",
-    "merge.incomingHeaderBackground": "#333333",
-    "merge.incomingContentBackground": "#333333",
-    "merge.border": "#333333",
-    "editorOverviewRuler.currentContentForeground": "color10",
-    "editorOverviewRuler.incomingContentForeground": "#333333",
-    "panel.background": "333333",
-    "panel.border": "color08",
-    "panelTitle.activeBorder": "color03",
-    "panelTitle.activeForeground": "color12",
-    "panelTitle.inactiveForeground": "#333333",
-    "statusBar.background": "color01",
-    "statusBar.foreground": "color05",
-    "statusBar.border": "color08",
-    "333333.debuggingBackground": "color06",
-    "statusBar.debuggingForeground": "color00",
-    "statusBar.debuggingBorder": "color06",
-    "statusBar.noFolderBackground": "color09",
-    "statusBar.noFolderForeground": "color00",
-    "statusBar.noFolderBorder": "color09",
-    "statusBarItem.activeBackground": "color10",
-    "statusBarItem.hoverBackground": "color11",
-    "statusBarItem.prominentBackground": "color10",
-    "statusBarItem.prominentHoverBackground": "color11",
-    "titleBar.activeBackground": "color00",
-    "titleBar.activeForeground": "color04",
-    "titleBar.inactiveBackground": "color00",
-    "titleBar.inactiveForeground": "color03",
-    "notification.background": "color08",
-    "notification.foreground": "color05",
-    "notification.buttonBackground": "#333333",
-    "notification.buttonHoverBackground": "color10",
-    "notification.buttonForeground": "color00",
-    "notification.infoBackground": "#333333",
-    "notification.infoForeground": "color00",
-    "notification.warningBackground": "color06",
-    "notification.warningForeground": "color00",
-    "notification.errorBackground": "color05",
-    "notification.errorForeground": "color00",
-    "extensionButton.prominentForeground": "color00",
-    "extensionButton.prominentBackground": "#333333",
-    "extensionButton.prominentHoverBackground": "color10",
-    "pickerGroup.border": "color04",
-    "pickerGroup.foreground": "color05",
-    "terminal.background": "color00",
-    "terminal.foreground": "color12",
-    "terminal.ansiBlack": "color00",
-    "terminal.ansiBlue": "#333333",
-    "terminal.ansiBrightBlack": "color08",
-    "terminal.ansiBrightBlue": "#333333",
-    "terminal.ansiBrightCyan": "color10",
-    "terminal.ansiBrightGreen": "color10",
-    "terminal.ansiBrightMagenta": "color14",
-    "terminal.ansiBrightRed": "color06",
-    "terminal.ansiBrightWhite": "color05",
-    "terminal.ansiBrightYellow": "color13",
-    "terminal.ansiCyan": "color10",
-    "terminal.ansiGreen": "color11",
-    "terminal.ansiMagenta": "color14",
-    "terminal.ansiRed": "color05",
-    "terminal.ansiWhite": "color12",
-    "terminal.ansiYellow": "color13",
-    "terminal.selectionBackground": "#333333",
-    "terminalCursor.background": "color08",
-    "terminalCursor.foreground": "color04",
-    "debugToolBar.background": "color08",
-    "welcomePage.buttonBackground": "color08",
-    "welcomePage.buttonHoverBackground": "color15",
-    "walkThrough.embeddedEditorBackground": "color00",
-    "gitDecoration.modifiedResourceForeground": "color13",
-    "gitDecoration.deletedResourceForeground": "color05",
-    "gitDecoration.untrackedResourceForeground": "color09",
-    "gitDecoration.ignoredResourceForeground": "color03",
-    "gitDecoration.conflictingResourceForeground": "color10"
-  }
-  "tokenColors": [
-    {
-      "settings": {
-        "background": "color00",
-        "foreground": "color12",
-        "selectionBorder": "color04",
-        "findHighlight": "color13",
-        "findHighlightForeground": "color00",
-        "activeGuide": "color06",
-        "bracketsForeground": "color12",
-        "bracketsOptions": "stippled_underline",
-        "bracketsContentsForeground": "color12",
-        "tagsOptions": "stippled_underline"
-      }
-    },
-    {
-      "name": "Comment",
-      "scope": "comment",
-      "settings": {
-        "foreground": "color033"
-      }
-    },
-    {
-      "name": "Constant",
-      "scope": "constant",
-      "settings": {
-        "foreground": "color14"
-      }
-    },
-    {
-      "name": "Entity",
-      "scope": "entity",
-      "settings": {
-        "foreground": "color10"
-      }
-    },
-    {
-      "name": "Invalid",
-      "scope": "invalid",
-      "settings": {
-        "background": "color05",
-        "foreground": "color08"
-      }
-    },
-    {
-      "name": "Keyword",
-      "scope": "keyword",
-      "settings": {
-        "foreground": "color09"
-      }
-    },
-    {
-      "name": "Storage",
-      "scope": "storage",
-      "settings": {
-        "foreground": "color14"
-      }
-    },
-    {
-      "name": "String",
-      "scope": "string",
-      "settings": {
-        "foreground": "color11"
-      }
-    },
-    {
-      "name": "Support",
-      "scope": "support",
-      "settings": {
-        "foreground": "color10"
-      }
-    },
-    {
-      "name": "Variable",
-      "scope": "variable",
-      "settings": {
-        "foreground": "color05"
-      }
-    },
-    {
-      "name": "Markup Heading",
-      "scope": "markup.heading",
-      "settings": {
-        "foreground": "color10"
-      }
-    },
-    {
-      "name": "Markup Deleted",
-      "scope": "markup.deleted",
-      "settings": {
-        "foreground": "color05"
-      }
-    },
-    {
-      "name": "Markup Inserted",
-      "scope": "markup.inserted",
-      "settings": {
-        "foreground": "color11"
-      }
-    },
-    {
-      "name": "Markup Changed",
-      "scope": "markup.changed",
-      "settings": {
-        "foreground": "color13d"
-      }
-    },
-    {
-      "name": "Markup Underline",
-      "scope": "markup.underline",
-      "settings": {
-        "fontStyle": "underline"
-      }
-    },
-    {
-      "name": "Markup Underline Link",
-      "scope": "markup.underline.link",
-      "settings": {
-        "foreground": "#ff000"
-      }
-    },
-    {
-      "name": "Markup List",
-      "scope": "markup.list",
-      "settings": {
-        "foreground": "color05"
-      }
-    },
-    {
-      "name": "Markup Raw",
-      "scope": "markup.raw",
-      "settings": {
-        "foreground": "color14"
-      }
-    }
-  ]
+	colors = {
+		"errorForeground": "color08",
+		"focusBorder": "color1499",
+		"selection.background": "color1499",
+		"input.background": "color00",
+		"input.foreground": "color04",
+		"inputOption.activeBorder": "color1499",
+		"input.placeholderForeground": "color05aa",
+		"inputValidation.infoBackground": "color01",
+		"inputValidation.infoBorder": "color03",
+		"inputValidation.warningBackground": "color1070",
+		"inputValidation.warningBorder": "color1050",
+		"inputValidation.errorBackground": "color1050",
+		"inputValidation.errorBorder": "color1030",
+		"dropdown.background": "color00",
+		"dropdown.border": "color1499",
+		"list.focusBackground": "color00",
+		"list.activeSelectionBackground": "color00",
+		"list.inactiveSelectionBackground": "color0188",
+		"list.hoverBackground": "color01aa",
+		"list.dropBackground": "color0188",
+		"list.highlightForeground": "color06",
+		"pickerGroup.foreground": "color1499",
+		"pickerGroup.border": "color1499",
+		"button.background": "color1499",
+		"badge.background": "color00",
+		"progressBar.background": "color00",
+		"editor.background": "color00",
+		"editorWidget.background": "color00",
+		"editor.selectionBackground": "color01",
+		"editor.selectionHighlightBackground": "color00aa",
+		"editorHoverWidget.background": "color0250",
+		"editor.lineHighlightBackground": "color01",
+		"editorCursor.foreground": "color04",
+		"editorWhitespace.foreground": "color0580",
+		"editorLineNumber.foreground": "color05",
+		"editorLineNumber.activeForeground": "colo06",
+		"editorGutter.background": "color01",
+		"editorMarkerNavigationError.background": "color02",
+		"editorMarkerNavigationWarning.background": "color02",
+		"editor.wordHighlightBackground": "color01aa",
+		"editor.wordHighlightStrongBackground": "color00aa",
+		"peekViewTitle.background": "color00",
+		"peekView.border": "color13",
+		"peekViewResult.background": "color00",
+		"peekViewEditor.background": "color01",
+		"peekViewEditorGutter.background": "color01",
+		"peekViewEditor.matchHighlightBackground": "color0240",
+		"tab.activeBackground": "color00",
+		"tab.inactiveBackground": "color00",
+		"tab.border": "color00",
+		"tab.activeForeground": "color01",
+		"tab.inactiveForeground": "color05",
+		"editorGroup.background": "color01",
+		"editorGroupHeader.tabsBackground": "color00",
+		"editorGroup.border": "color00",
+		"editorGroup.dropBackground": "color1444",
+		"panel.border": "color13",
+		"statusBar.foreground": "color05",
+		"statusBar.background": "color00",
+		"statusBar.noFolderBackground": "color00",
+		"statusBarItem.prominentBackground": "color00",
+		"statusBarItem.prominentHoverBackground": "color00",
+		"activityBar.background": "color04",
+		"sideBar.background": "color00",
+		"sideBarTitle.foreground": "color05",
+		"titleBar.activeBackground": "color01",
+		"terminal.foreground": "color04",
+		"statusBar.debuggingBackground": "color00",
+		"debugExceptionWidget.border": "color02",
+		"debugExceptionWidget.background": "color00",
+		"debugToolBar.background": "color00",
+		"terminal.ansiBlack": "color01",
+		"terminal.ansiRed": "color10",
+		"terminal.ansiGreen": "color15",
+		"terminal.ansiYellow": "color08",
+		"terminal.ansiBlue": "color13",
+		"terminal.ansiMagenta": "color11",
+		"terminal.ansiCyan": "color14",
+		"terminal.ansiWhite": "color04",
+		"terminal.ansiBrightBlack": "color01",
+		"terminal.ansiBrightRed": "color10",
+		"terminal.ansiBrightGreen": "color15",
+		"terminal.ansiBrightYellow": "color08",
+		"terminal.ansiBrightBlue": "color04",
+		"terminal.ansiBrightMagenta": "color12",
+		"terminal.ansiBrightCyan": "color05",
+		"terminal.ansiBrightWhite": "color04"
+	}
+	"tokenColors": [
+		{
+			"settings": {
+				"foreground": "#bbbbbbff",
+				"background": "color00ff"
+			}
+		},
+		{
+			"scope": [
+				"meta.embedded",
+				"source.groovy.embedded"
+			],
+			"settings": {
+				"background": "color00",
+				"foreground": "color05"
+			}
+		},
+		{
+			"name": "Comment",
+			"scope": "comment",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "color03"
+			}
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"settings": {
+				"foreground": "color14"
+			}
+		},
+		{
+			"name": "Regexp",
+			"scope": "string.regexp",
+			"settings": {
+				"foreground": "color12"
+			}
+		},
+		{
+			"name": "Number",
+			"scope": "constant.numeric",
+			"settings": {
+				"foreground": "color11"
+			}
+		},
+		{
+			"name": "Variable",
+			"scope": [
+				"variable.language",
+				"variable.other"
+			],
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"name": "Keyword",
+			"scope": "keyword",
+			"settings": {
+				"foreground": "color15"
+			}
+		},
+		{
+			"name": "Storage",
+			"scope": "storage",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "color05"
+			}
+		},
+		{
+			"name": "Class name",
+			"scope": [
+				"entity.name.class",
+				"entity.name.type"
+			],
+			"settings": {
+				"fontStyle": "",
+				"foreground": "color10"
+			}
+		},
+		{
+			"name": "Function name",
+			"scope": "entity.name.function",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"name": "Variable start",
+			"scope": "punctuation.definition.variable",
+			"settings": {
+				"foreground": "color15"
+			}
+		},
+		{
+			"name": "Embedded code markers",
+			"scope": [
+				"punctuation.section.embedded.begin",
+				"punctuation.section.embedded.end"
+			],
+			"settings": {
+				"foreground": "color10"
+			}
+		},
+		{
+			"name": "Built-in constant",
+			"scope": [
+				"constant.language",
+				"meta.preprocessor"
+			],
+			"settings": {
+				"foreground": "color08"
+			}
+		},
+		{
+			"name": "Support.construct",
+			"scope": [
+				"support.function.construct",
+				"keyword.other.new"
+			],
+			"settings": {
+				"foreground": "color09"
+			}
+		},
+		{
+			"name": "User-defined constant",
+			"scope": [
+				"constant.character",
+				"constant.other"
+			],
+			"settings": {
+				"foreground": "color09"
+			}
+		},
+		{
+			"name": "Inherited class",
+			"scope": "entity.other.inherited-class",
+			"settings": {
+				"foreground": "color12"
+			}
+		},
+		{
+			"name": "Function argument",
+			"scope": "variable.parameter",
+			"settings": {}
+		},
+		{
+			"name": "Tag name",
+			"scope": "entity.name.tag",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"name": "Tag start/end",
+			"scope": "punctuation.definition.tag",
+			"settings": {
+				"foreground": "color03"
+			}
+		},
+		{
+			"name": "Tag attribute",
+			"scope": "entity.other.attribute-name",
+			"settings": {
+				"foreground": "color05"
+			}
+		},
+		{
+			"name": "Library function",
+			"scope": "support.function",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"name": "Continuation",
+			"scope": "punctuation.separator.continuation",
+			"settings": {
+				"foreground": "color 10"
+			}
+		},
+		{
+			"name": "Library constant",
+			"scope": "support.constant",
+			"settings": {}
+		},
+		{
+			"name": "Library class/type",
+			"scope": [
+				"support.type",
+				"support.class"
+			],
+			"settings": {
+				"foreground": "color15"
+			}
+		},
+		{
+			"name": "Library Exception",
+			"scope": "support.type.exception",
+			"settings": {
+				"foreground": "color09"
+			}
+		},
+		{
+			"name": "Library variable",
+			"scope": "support.other.variable",
+			"settings": {}
+		},
+		{
+			"name": "Invalid",
+			"scope": "invalid",
+			"settings": {}
+		},
+		{
+			"name": "diff: header",
+			"scope": [
+				"meta.diff",
+				"meta.diff.header"
+			],
+			"settings": {
+				"background": "color08",
+				"fontStyle": "italic",
+				"foreground": "color07"
+			}
+		},
+		{
+			"name": "diff: deleted",
+			"scope": "markup.deleted",
+			"settings": {
+				"background": "color05",
+				"fontStyle": "",
+				"foreground": "color10"
+			}
+		},
+		{
+			"name": "diff: changed",
+			"scope": "markup.changed",
+			"settings": {
+				"background": "color05",
+				"fontStyle": "",
+				"foreground": "color09"
+			}
+		},
+		{
+			"name": "diff: inserted",
+			"scope": "markup.inserted",
+			"settings": {
+				"background": "color05",
+				"foreground": "color15"
+			}
+		},
+		{
+			"name": "Markup Quote",
+			"scope": "markup.quote",
+			"settings": {
+				"foreground": "color15"
+			}
+		},
+		{
+			"name": "Markup Lists",
+			"scope": "markup.list",
+			"settings": {
+				"foreground": "color08"
+			}
+		},
+		{
+			"name": "Markup Styling",
+			"scope": [
+				"markup.bold",
+				"markup.italic"
+			],
+			"settings": {
+				"foreground": "color11"
+			}
+		},
+		{
+			"name": "Markup Inline",
+			"scope": "markup.inline.raw",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "color14"
+			}
+		},
+		{
+			"name": "Markup Headings",
+			"scope": "markup.heading",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"name": "Markup Setext Header",
+			"scope": "markup.heading.setext",
+			"settings": {
+				"fontStyle": "",
+				"foreground": "color13"
+			}
+		},
+		{
+			"scope": "token.info-token",
+			"settings": {
+				"foreground": "#6796e6"
+			}
+		},
+		{
+			"scope": "token.warn-token",
+			"settings": {
+				"foreground": "cd9731"
+			}
+		},
+		{
+			"scope": "token.error-token",
+			"settings": {
+				"foreground": "color10"
+			}
+		},
+		{
+			"scope": "token.debug-token",
+			"settings": {
+				"foreground": "color10"
+			}
+		},
+		{
+			"scope": "variable.object.property",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "variable.parameter",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "support.type",
+			"settings": {
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "storage.type.function",
+			"settings": {
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "entity.other.inherited-class",
+			"settings": {
+				"foreground": "color08"
+			}
+		},
+		{
+			"scope": "storage.modifier",
+			"settings": {
+				"foreground": "color15ff",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "storage.type",
+			"settings": {
+				"foreground": "color15ff",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "keyword.control.import",
+			"settings": {
+				"foreground": "color11"
+			}
+		},
+		{
+			"scope": "storage.modifier.async",
+			"settings": {
+				"foreground": "color15ff",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "meta.import",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "source.ts",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "meta.function-call",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "entity.name.type",
+			"settings": {
+				"foreground": "color08"
+			}
+		},
+		{
+			"scope": "entity.name.function",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "variable.other",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "storage.modifier.tsx",
+			"settings": {
+				"foreground": "color15"
+			}
+		},
+		{
+			"scope": "entity.name.type.class.python",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"scope": "support.type.python",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"scope": "source.python",
+			"settings": {
+				"foreground": "color04"
+			}
+		},
+		{
+			"scope": "keyword.control.import",
+			"settings": {
+				"foreground": "color09"
+			}
+		},
+		{
+			"scope": "keyword.control.from",
+			"settings": {
+				"foreground": "color09"
+			}
+		},
+		{
+			"scope": "constant.language.python",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"scope": "entity.name.function.python",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"scope": "punctuation.separator.dictionary.key-value.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json",
+			"settings": {
+				"foreground": "color03"
+			}
+		},
+		{
+			"scope": "storage.type.ts",
+			"settings": {
+				"foreground": "color13"
+			}
+		},
+		{
+			"scope": "support.type.primitive",
+			"settings": {
+				"foreground": "color08"
+			}
+		},
+		{
+			"scope": "punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json",
+			"settings": {
+				"foreground": "color11"
+			}
+		}
+	]
 
   constructor(name: string, type: string){
     this.name = name
