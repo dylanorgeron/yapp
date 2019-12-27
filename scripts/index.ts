@@ -1,27 +1,27 @@
-// import ColorThief from 'colorthief'
 import ColorTable from './color-table'
 import VSCodeTheme from './vs-code-theme'
+import ImagePaletteGenerator from './image-palette-generator'
 
 //initial palette
 //lioness
-let colors = [
-    '#121920',
-    '#121E28',
-    '#302823',
-    '#646963',
-    '#243C51',
-    '#444C4B',
-    '#E4DEC1',
-    '#E8DEAE',
-    '#242E34',
-    '#B08664',
-    '#9A4731',
-    '#E5C27A',
-    '#C4C1A9',
-    '#DFCA9D',
-    '#A4A392',
-    '#AA662D',
-]
+// let colors = [
+//     '#121920',
+//     '#121E28',
+//     '#302823',
+//     '#646963',
+//     '#243C51',
+//     '#444C4B',
+//     '#E4DEC1',
+//     '#E8DEAE',
+//     '#242E34',
+//     '#B08664',
+//     '#9A4731',
+//     '#E5C27A',
+//     '#C4C1A9',
+//     '#DFCA9D',
+//     '#A4A392',
+//     '#AA662D',
+// ]
 
 // colors = [
 //     '#121920',
@@ -63,12 +63,15 @@ let colors = [
 // ]
 
 //build table
-const colorTable = new ColorTable()
-colorTable.generateTable(colors)
+export const colorTable = new ColorTable()
+colorTable.generateTable()
+
+//image uploader
+const imagePaletteGenerator = new ImagePaletteGenerator()
 
 //click events
 const vsCodeTheme = new VSCodeTheme()
 const vsCodeExportBtn = document.getElementById('vs-code-export-btn')
 if(vsCodeExportBtn) vsCodeExportBtn.addEventListener('click', () => {
-    vsCodeTheme.exportTheme(colors)
+    vsCodeTheme.exportTheme(colorTable.colors)
 })

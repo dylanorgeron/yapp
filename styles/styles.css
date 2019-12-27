@@ -15,3 +15,10 @@
     width: 70px;
     margin-bottom: -4px;
 }
+
+#image-container{
+    height: 200px;
+}
+#image-container > img{
+    height: 100%;
+}

@@ -1,9 +1,27 @@
 class ColorTable{
-    generateTable(colors: string[]) {
+    public colors = [
+        '#121920',
+        '#121E28',
+        '#302823',
+        '#646963',
+        '#243C51',
+        '#444C4B',
+        '#E4DEC1',
+        '#E8DEAE',
+        '#242E34',
+        '#B08664',
+        '#9A4731',
+        '#E5C27A',
+        '#C4C1A9',
+        '#DFCA9D',
+        '#A4A392',
+        '#AA662D',
+    ]
+    generateTable() {
         const table = document.getElementById('color-table')
         let tableCoreHtml = ``
         let tableHeaderHtml = `<div class="color-row color-header">`
-        colors.forEach((bgColor, index) => {
+        this.colors.forEach((bgColor, index) => {
             tableHeaderHtml +=
                 `<div 
                 id="header-${index}"
@@ -14,7 +32,7 @@ class ColorTable{
                 <input style="display:none" type="color" id="input-${index}" value="${bgColor}"/>`
             tableCoreHtml +=
                 `<div class="color-row" style='background: ${bgColor}'>`
-            colors.forEach(fgColor =>
+            this.colors.forEach(fgColor =>
                 tableCoreHtml +=
                 `<div class="color-cell" style="color: ${fgColor}">${fgColor}</div>`
             )
@@ -23,7 +41,7 @@ class ColorTable{
         tableHeaderHtml += `</div>`
         if (table){
             table.innerHTML = tableHeaderHtml + tableCoreHtml  
-            table.style.backgroundColor = colors[0]
+            table.style.backgroundColor = this.colors[0]
         } 
         for (let i = 0; i < 16; i++) {
             const headerEl = document.getElementById(`header-${i.toString()}`)
@@ -36,8 +54,8 @@ class ColorTable{
             const inputEl = document.getElementById(`input-${i.toString()}`)
             if(inputEl){
                 inputEl.addEventListener('change', (e: any) =>{
-                    colors[i] = inputEl.value
-                    this.generateTable(colors)
+                    this.colors[i] = inputEl.value
+                    this.generateTable()
                 })
             }
         }
