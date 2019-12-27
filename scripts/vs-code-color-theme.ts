@@ -17,9 +17,9 @@ class VSCodeColorTheme {
 		"inputValidation.errorBorder": "color1030",
 		"dropdown.background": "color00",
 		"dropdown.border": "color1499",
-		"list.focusBackground": "color00",
-		"list.activeSelectionBackground": "color00",
-		"list.inactiveSelectionBackground": "color0188",
+		"list.focusBackground": "color04",
+		"list.activeSelectionBackground": "color04",
+		"list.inactiveSelectionBackground": "color00",
 		"list.hoverBackground": "color01aa",
 		"list.dropBackground": "color0188",
 		"list.highlightForeground": "color06",
@@ -37,7 +37,7 @@ class VSCodeColorTheme {
 		"editorCursor.foreground": "color04",
 		"editorWhitespace.foreground": "color0580",
 		"editorLineNumber.foreground": "color05",
-		"editorLineNumber.activeForeground": "colo06",
+		"editorLineNumber.activeForeground": "color07",
 		"editorGutter.background": "color01",
 		"editorMarkerNavigationError.background": "color02",
 		"editorMarkerNavigationWarning.background": "color02",
@@ -49,10 +49,10 @@ class VSCodeColorTheme {
 		"peekViewEditor.background": "color01",
 		"peekViewEditorGutter.background": "color01",
 		"peekViewEditor.matchHighlightBackground": "color0240",
-		"tab.activeBackground": "color00",
+		"tab.activeBackground": "color01",
 		"tab.inactiveBackground": "color00",
 		"tab.border": "color00",
-		"tab.activeForeground": "color01",
+		"tab.activeForeground": "color06",
 		"tab.inactiveForeground": "color05",
 		"editorGroup.background": "color01",
 		"editorGroupHeader.tabsBackground": "color00",
@@ -64,11 +64,11 @@ class VSCodeColorTheme {
 		"statusBar.noFolderBackground": "color00",
 		"statusBarItem.prominentBackground": "color00",
 		"statusBarItem.prominentHoverBackground": "color00",
-		"activityBar.background": "color04",
+		"activityBar.background": "color01",
 		"sideBar.background": "color00",
 		"sideBarTitle.foreground": "color05",
 		"titleBar.activeBackground": "color01",
-		"terminal.foreground": "color04",
+		"terminal.foreground": "color06",
 		"statusBar.debuggingBackground": "color00",
 		"debugExceptionWidget.border": "color02",
 		"debugExceptionWidget.background": "color00",
@@ -80,7 +80,7 @@ class VSCodeColorTheme {
 		"terminal.ansiBlue": "color13",
 		"terminal.ansiMagenta": "color11",
 		"terminal.ansiCyan": "color14",
-		"terminal.ansiWhite": "color04",
+		"terminal.ansiWhite": "color13",
 		"terminal.ansiBrightBlack": "color01",
 		"terminal.ansiBrightRed": "color10",
 		"terminal.ansiBrightGreen": "color15",
@@ -88,9 +88,9 @@ class VSCodeColorTheme {
 		"terminal.ansiBrightBlue": "color04",
 		"terminal.ansiBrightMagenta": "color12",
 		"terminal.ansiBrightCyan": "color05",
-		"terminal.ansiBrightWhite": "color04"
+		"terminal.ansiBrightWhite": "color06"
 	}
-	"tokenColors": [
+	tokenColors = [
 		{
 			"settings": {
 				"foreground": "#bbbbbbff",
@@ -119,14 +119,14 @@ class VSCodeColorTheme {
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "color14"
+				"foreground": "color11"
 			}
 		},
 		{
 			"name": "Regexp",
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "color12"
+				"foreground": "color15"
 			}
 		},
 		{
@@ -143,7 +143,7 @@ class VSCodeColorTheme {
 				"variable.other"
 			],
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -176,7 +176,7 @@ class VSCodeColorTheme {
 			"name": "Function name",
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -242,7 +242,7 @@ class VSCodeColorTheme {
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -263,7 +263,7 @@ class VSCodeColorTheme {
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -379,7 +379,7 @@ class VSCodeColorTheme {
 			"name": "Markup Headings",
 			"scope": "markup.heading",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -387,7 +387,7 @@ class VSCodeColorTheme {
 			"scope": "markup.heading.setext",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -417,13 +417,13 @@ class VSCodeColorTheme {
 		{
 			"scope": "variable.object.property",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color09"
 			}
 		},
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color09"
 			}
 		},
 		{
@@ -498,13 +498,13 @@ class VSCodeColorTheme {
 		{
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color09"
 			}
 		},
 		{
 			"scope": "variable.other",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color09"
 			}
 		},
 		{
@@ -516,19 +516,19 @@ class VSCodeColorTheme {
 		{
 			"scope": "entity.name.type.class.python",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
 			"scope": "support.type.python",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
 			"scope": "source.python",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color09"
 			}
 		},
 		{
@@ -546,13 +546,13 @@ class VSCodeColorTheme {
 		{
 			"scope": "constant.language.python",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
 			"scope": "entity.name.function.python",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
@@ -564,7 +564,7 @@ class VSCodeColorTheme {
 		{
 			"scope": "storage.type.ts",
 			"settings": {
-				"foreground": "color13"
+				"foreground": "color10"
 			}
 		},
 		{
