@@ -13,23 +13,32 @@ class ImagePaletteGenerator{
                 const reader = new FileReader()
                 reader.onloadend = () => img.src = reader.result
                 reader.readAsDataURL(file)
+                imageContainer.innerHTML = ''
                 imageContainer.append(img)
                 if(img.complete){
-                    const hexColors = this.convertColors(this.colorThief.getPalette(img, 16))
-                    colorTable.colors = hexColors
-                    colorTable.generateTable()
+                    this.generateColors(img)
                 }else{
                     img.addEventListener('load', () => {
-                        const hexColors = this.convertColors(this.colorThief.getPalette(img, 16))
-                        colorTable.colors = hexColors
-                        colorTable.generateTable()
+                        this.generateColors(img)
                     })
                 }
             })
         }
     }
-    convertColors(colors: []){
-        let hexColors = []
+    generateColors(img: HTMLImageElement){
+        //fetch the starting palette from the image
+        let rgbColors = this.colorThief.getPalette(img, 16)
+        //try and line the colors up
+        rgbColors = this.sortColors(rgbColors)
+        //convert rgb to hex
+        const hexColors = this.convertColorsToHex(rgbColors)
+        //update the table
+        colorTable.colors = hexColors
+        colorTable.generateTable()
+    }
+
+    convertColorsToHex(colors: []){
+        let hexColors: string[] = []
         colors.forEach(color => {
             hexColors.push(this.rgbToHex(color[0], color[1], color[2]))       
         });
@@ -40,6 +49,39 @@ class ImagePaletteGenerator{
         const hex = x.toString(16)
         return hex.length === 1 ? '0' + hex : hex
       }).join('')
+    }
+
+    sortColors(colors: []){
+        //lets sort dem colors
+        let darkestValue = 1000
+        let darkestIndex = 0
+        let redIndex = 0
+        let redRatio = 0
+        colors.forEach((color, index) => {
+            //darkest value
+            const sum = color[0] + color[1] + color[2]
+            if(sum < darkestValue){
+                darkestValue = sum
+                darkestIndex = index
+            }
+            //red
+            if(color[0] / (color[1] + color[2]) > redRatio){
+                redRatio = color[0] / (color[1] + color[2])
+                redIndex = index
+            }
+        });
+        //set bg color
+        colors = this.swapColor(0, darkestIndex, colors)
+        //red
+        colors = this.swapColor(8, redIndex, colors)
+        
+        return colors
+    }
+    swapColor(index1: any, index2: number, arr: []){
+        const colorToSwap = arr[index1]
+        arr[index1] = arr[index2]
+        arr[index2] = colorToSwap
+        return arr
     }
 }
 
