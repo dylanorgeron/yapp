@@ -17,12 +17,17 @@ class ImagePaletteGenerator {
                 reader.readAsDataURL(file)
                 imageContainer.innerHTML = ''
                 imageContainer.append(img)
-                if (img.complete) {
-                    this.generateColors(img)
-                } else {
-                    img.addEventListener('load', () => {
+                const onload = () => {
+                    if (img.height && img.width) {
                         this.generateColors(img)
-                    })
+                    } else {
+                        requestAnimationFrame(onload)
+                    }
+                }
+                if (img.complete) {
+                    onload()
+                } else {
+                    img.addEventListener('load', onload)
                 }
             })
         }
