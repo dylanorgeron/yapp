@@ -57,10 +57,9 @@ class ImagePaletteGenerator {
     }
 
     sortColors(colors: []) {
-        
+        let processedColors: [] = []
         //lets sort dem colors
         let darkestValue = 1000
-        let darkestIndex = 0
         let redIndex = 0
         let redRatio = 0
         let lightestValue = 0
@@ -72,7 +71,11 @@ class ImagePaletteGenerator {
             const sum = color[0] + color[1] + color[2]
             if (sum < darkestValue) {
                 darkestValue = sum
-                darkestIndex = index
+                processedColors[0] = color
+                processedColors[1] = color
+                processedColors[2] = color
+                processedColors[3] = color
+                processedColors[4] = color
             }
             //foreground color
             if(sum > lightestValue){
@@ -89,33 +92,35 @@ class ImagePaletteGenerator {
         //now that we have our background color, we can check contrast
         colors.forEach((color, index) => {
             if(index === lightestIndex || index === redIndex) return
-            if(this.ccc.isLevelCustom(this.rgbToHex(color), this.rgbToHex(colors[darkestIndex]), 3)){
+            if(this.ccc.isLevelCustom(this.rgbToHex(color), this.rgbToHex(processedColors[0]), 3)){
                 contrastColors.push(color)
             }
         })
-        console.log(contrastColors)
 
         //red
-        this.swapColor(8, redIndex, colors)
+        processedColors[8] = colors[redIndex]
 
-        //bg color
-        this.swapColor(0, darkestIndex, colors)
-
-        //foreground color
-        this.swapColor(6, lightestIndex, colors)
-
-        //secondary foreground
-        this.swapColor(6, lightestIndex, colors)
-        this.adjustColor(colors[5], colors[6], -50)
+        //foreground colors
+        processedColors[5] = colors[lightestIndex]
+        processedColors[6] = colors[lightestIndex]
+        processedColors[7] = colors[lightestIndex]
+        processedColors[6] = this.adjustColor(processedColors[6], -50)
+        processedColors[5] = this.adjustColor(processedColors[6], -50)
 
         //secondary shades
-        this.adjustColor(colors[1], colors[0], 5)
-        this.adjustColor(colors[2], colors[1], 15)
-        this.adjustColor(colors[3], colors[2], 25)
-        this.adjustColor(colors[4], colors[3], 25)
+        processedColors[1] = this.adjustColor(processedColors[0], 5)
+        processedColors[2] = this.adjustColor(processedColors[1], 15)
+        processedColors[3] = this.adjustColor(processedColors[2], 25)
+        processedColors[4] = this.adjustColor(processedColors[3], 25)
 
         //start using contrast approved colors
-        return colors
+        contrastColors.forEach(color => {
+            if(processedColors.length < 16){
+                processedColors.push(color)
+            }
+        })
+
+        return processedColors
     }
     swapColor(index1: any, index2: number, arr: []) {
         const colorToSwap = arr[index1]
@@ -124,10 +129,12 @@ class ImagePaletteGenerator {
         return arr
     }
 
-    adjustColor(colorToLighten: [], colorToSample: [], amount: number) {
-        colorToLighten[0] = colorToSample[0] + amount > 255 ? 255 : colorToSample[0] + amount
-        colorToLighten[1] = colorToSample[1] + amount > 255 ? 255 : colorToSample[1] + amount
-        colorToLighten[2] = colorToSample[2] + amount > 255 ? 255 : colorToSample[2] + amount
+    adjustColor(color: [], amount: number) {
+        return [
+            color[0] + amount > 255 ? 255 : color[0] + amount,
+            color[1] + amount > 255 ? 255 : color[1] + amount,
+            color[2] + amount > 255 ? 255 : color[2] + amount,
+        ]
     }
 }
 
