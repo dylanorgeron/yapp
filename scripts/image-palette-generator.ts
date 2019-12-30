@@ -55,6 +55,8 @@ class ImagePaletteGenerator{
         //lets sort dem colors
         let darkestValue = 1000
         let darkestIndex = 0
+        let secondDarkestValue = 1000
+        let secondDarkestIndex = 0
         let redIndex = 0
         let redRatio = 0
         colors.forEach((color, index) => {
@@ -71,9 +73,11 @@ class ImagePaletteGenerator{
             }
         });
         //set bg color
-        colors = this.swapColor(0, darkestIndex, colors)
+        this.swapColor(0, darkestIndex, colors)
+        //set secondary bg color
+        this.lightenColor(colors[1], colors[0], 5)
         //red
-        colors = this.swapColor(8, redIndex, colors)
+        this.swapColor(8, redIndex, colors)
         
         return colors
     }
@@ -82,6 +86,12 @@ class ImagePaletteGenerator{
         arr[index1] = arr[index2]
         arr[index2] = colorToSwap
         return arr
+    }
+
+    lightenColor(colorToLighten: [], colorToSample: [], amount: number){
+        colorToLighten[0] = colorToSample[0] + amount > 255 ? 255 : colorToSample[0] + amount
+        colorToLighten[1] = colorToSample[1] + amount > 255 ? 255 : colorToSample[1] + amount
+        colorToLighten[2] = colorToSample[2] + amount > 255 ? 255 : colorToSample[2] + amount
     }
 }
 
