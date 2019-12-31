@@ -1,3 +1,6 @@
-node_modules
-.cache
-dist
+.cache/
+dist/
+node_modules/
+
+package-lock.json
+*.log
