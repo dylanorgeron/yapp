@@ -28,8 +28,7 @@ class ColorTable{
                 class="color-cell" 
                 style="background: ${bgColor};color: white">
                 ${index}
-                </div>
-                <input style="display:none" type="color" id="input-${index}" value="${bgColor}"/>`
+                </div><input style="display:none" type="color" id="input-${index}" value="${bgColor}"/>`
             tableCoreHtml +=
                 `<div class="color-row" style='background: ${bgColor}'>`
             this.colors.forEach(fgColor =>
