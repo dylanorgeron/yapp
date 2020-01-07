@@ -27,7 +27,7 @@ class VSCodeColorTheme {
 		"editorGutter.modifiedBackground": "color10",
 		"editorGutter.deletedBackground": "color08",
 		"editorGutter.commentRangeForeground": "color05",
-		"editorHoverWidget.background": "color0250",
+		"editorHoverWidget.background": "color02",
 		"editorLineNumber.activeForeground": "color07",
 		"editorLineNumber.foreground": "color05",
 		"editorMarkerNavigationError.background": "color02",
