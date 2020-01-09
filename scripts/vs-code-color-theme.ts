@@ -3,6 +3,10 @@ class VSCodeColorTheme {
   type = 'dark'
 	colors = {
 		"activityBar.background": "color01",
+		"activityBarBadge.background": "color0970",
+		"activityBarBadge.foreground": "color07",
+		"activityBar.foreground": "color07",
+		"activityBar.inactiveForeground": "color05",
 		"badge.background": "color0970",
 		"badge.foreground": "color07",
 		"button.background": "color02",
