@@ -1,23 +1,26 @@
 class ColorTable{
-    public colors = [
-        '#121920',
-        '#121E28',
-        '#302823',
-        '#646963',
-        '#243C51',
-        '#444C4B',
-        '#E4DEC1',
-        '#E8DEAE',
-        '#242E34',
-        '#B08664',
-        '#9A4731',
-        '#E5C27A',
-        '#C4C1A9',
-        '#DFCA9D',
-        '#A4A392',
-        '#AA662D',
+    public colors: string[] = [
+        // '#121920',
+        // '#121E28',
+        // '#302823',
+        // '#646963',
+        // '#243C51',
+        // '#444C4B',
+        // '#E4DEC1',
+        // '#E8DEAE',
+        // '#242E34',
+        // '#B08664',
+        // '#9A4731',
+        // '#E5C27A',
+        // '#C4C1A9',
+        // '#DFCA9D',
+        // '#A4A392',
+        // '#AA662D',
     ]
     generateTable() {
+        //put colors in hash
+        if(this.colors.length) window.location.hash = this.colors.join(',')
+        //build table
         const table = document.getElementById('color-table')
         let tableCoreHtml = ``
         let tableHeaderHtml = `<div class="color-row color-header">`

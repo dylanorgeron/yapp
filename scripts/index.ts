@@ -4,6 +4,9 @@ import ImagePaletteGenerator from './image-palette-generator'
 
 //build table
 export const colorTable = new ColorTable()
+if(window.location.hash){
+    colorTable.colors = window.location.hash.split(',')
+}
 colorTable.generateTable()
 
 //image uploader
