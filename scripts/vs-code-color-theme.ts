@@ -10,6 +10,7 @@ class VSCodeColorTheme {
 		"badge.background": "color0970",
 		"badge.foreground": "color07",
 		"breadcrumb.foreground": "color05",
+		"breadcrumb.background": "color01",
 		"breadcrumb.focusForeground": "color06",
 		"breadcrumb.activeSelectionForeground": "color07",
 		"button.background": "color02",
