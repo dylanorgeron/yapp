@@ -18,3 +18,8 @@ const vsCodeExportBtn = document.getElementById('vs-code-export-btn')
 if(vsCodeExportBtn) vsCodeExportBtn.addEventListener('click', () => {
     vsCodeTheme.exportTheme(colorTable.colors)
 })
+
+const suggestBtn = document.getElementById('suggest-btn')
+if(suggestBtn) suggestBtn.addEventListener('click', () => {
+    colorTable.suggestColors()
+})

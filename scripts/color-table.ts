@@ -1,3 +1,5 @@
+import { adjustHexColor, rgbToHex } from './color-utils'
+
 class ColorTable{
     public colors: string[] = [
         // '#121920',
@@ -61,6 +63,14 @@ class ColorTable{
                 })
             }
         }
+    }
+
+    suggestColors(){
+        this.colors[1] = adjustHexColor(this.colors[0], 5)
+        this.colors[2] = adjustHexColor(this.colors[1], 15)
+        this.colors[3] = adjustHexColor(this.colors[2], 25)
+        this.colors[4] = adjustHexColor(this.colors[3], 25)
+        this.generateTable()
     }
 }
 
