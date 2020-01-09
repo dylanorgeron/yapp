@@ -10,10 +10,11 @@ class ImagePaletteGenerator {
         const imageContainer = document.getElementById('image-container')
         if (imageUploader && imageContainer) {
             imageUploader.addEventListener('change', (e: Event) => {
+                if(!e.target) return
                 const file = e.target.files[0]
                 const img = document.createElement('img')
                 const reader = new FileReader()
-                reader.onloadend = () => img.src = reader.result
+                reader.onloadend = () => img.src = typeof reader.result === 'string' ? reader.result : ""
                 reader.readAsDataURL(file)
                 imageContainer.innerHTML = ''
                 imageContainer.append(img)
@@ -47,7 +48,7 @@ class ImagePaletteGenerator {
         });
         return hexColors
     }
-    rgbToHex(color: []) {
+    rgbToHex(color: number[]) {
         const r = color[0]
         const g = color[1]
         const b = color[2]
@@ -57,15 +58,15 @@ class ImagePaletteGenerator {
         }).join('')
     }
 
-    sortColors(colors: []) {
-        let processedColors: [] = []
+    sortColors(colors: number[][]) {
+        let processedColors: number[][] = []
         //lets sort dem colors
         let darkestValue = 1000
         let redIndex = 0
         let redRatio = 0
         let lightestValue = 0
         let lightestIndex = 0
-        let contrastColors: [] = []
+        let contrastColors: number[][] = []
         colors.forEach((color, index) => {
             //darkest value to use for background
             //shades will be generated later based on this value
@@ -130,7 +131,7 @@ class ImagePaletteGenerator {
         return arr
     }
 
-    adjustColor(color: [], amount: number) {
+    adjustColor(color: number[], amount: number) {
         return [
             color[0] + amount > 255 ? 255 : color[0] + amount,
             color[1] + amount > 255 ? 255 : color[1] + amount,

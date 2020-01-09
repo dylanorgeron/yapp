@@ -1,16 +1,14 @@
-function adjustRGBColor(color: number[], amount: number, convertToHex: boolean = false) {
-    const adjustedColors: number[] = [
+function adjustRGBColor(color: number[], amount: number) {
+    return [
         color[0] + amount > 255 ? 255 : color[0] + amount,
         color[1] + amount > 255 ? 255 : color[1] + amount,
         color[2] + amount > 255 ? 255 : color[2] + amount,
     ]
-    if(!convertToHex) return adjustedColors
-    return rgbToHex(adjustedColors)
 }
 
 function adjustHexColor(color: string, amount: number){
     const rgbColor: number[] = hexToRgb(color)
-    return adjustRGBColor(rgbColor, amount, true)
+    return rgbToHex(adjustRGBColor(rgbColor, amount))
 }
 
 function rgbToHex(color: number[]) {
