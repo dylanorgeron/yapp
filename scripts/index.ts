@@ -1,5 +1,6 @@
 import ColorTable from './color-table'
 import VSCodeTheme from './vs-code-theme'
+import NotepadPPTheme from './notepadpp-theme'
 import ImagePaletteGenerator from './image-palette-generator'
 
 //build table
@@ -17,6 +18,12 @@ const vsCodeTheme = new VSCodeTheme()
 const vsCodeExportBtn = document.getElementById('vs-code-export-btn')
 if(vsCodeExportBtn) vsCodeExportBtn.addEventListener('click', () => {
     vsCodeTheme.exportTheme(colorTable.colors)
+})
+
+const notepadppTheme = new NotepadPPTheme()
+const notepadPPExportBtn = document.getElementById('notepadpp-export-btn')
+if(notepadPPExportBtn) notepadPPExportBtn.addEventListener('click', () => {
+    notepadppTheme.exportTheme(colorTable.colors)
 })
 
 const suggestBtn = document.getElementById('suggest-btn')
