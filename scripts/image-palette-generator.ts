@@ -1,10 +1,9 @@
 import ColorThief from 'colorthief'
-import ColorContrastChecker from 'color-contrast-checker'
 import { colorTable } from './index'
+import { Color } from './color-utils'
 
 class ImagePaletteGenerator {
     private colorThief = new ColorThief()
-    private ccc = new ColorContrastChecker()
     constructor() {
         const imageUploader = document.getElementById('image-uploader')
         const imageContainer = document.getElementById('image-container')
@@ -31,13 +30,16 @@ class ImagePaletteGenerator {
     }
     generateColors(img: HTMLImageElement) {
         //fetch the starting palette from the image
-        let rgbColors = this.colorThief.getPalette(img, 16)
+        const colorThiefColors = this.colorThief.getPalette(img, 16)
+        let colors: Color[] = []
+        colorThiefColors.forEach((c: number[]) => {
+            colors.push(new Color(c[0], c[1], c[2]))
+        });
         //try and line the colors up
-        rgbColors = this.sortColors(rgbColors)
+        colors = this.sortColors(colors)
         //convert rgb to hex
-        const hexColors = this.convertColorsToHex(rgbColors)
         //update the table
-        colorTable.colors = hexColors
+        colorTable.colors = colors
         colorTable.generateTable()
     }
 
@@ -58,26 +60,25 @@ class ImagePaletteGenerator {
         }).join('')
     }
 
-    sortColors(colors: number[][]) {
-        let processedColors: number[][] = []
+    sortColors(colors: Color[]) {
+        let processedColors: Color[] = []
         //lets sort dem colors
         let darkestValue = 1000
         let redIndex = 0
         let redRatio = 0
         let lightestValue = 0
         let lightestIndex = 0
-        let contrastColors: number[][] = []
         colors.forEach((color, index) => {
             //darkest value to use for background
             //shades will be generated later based on this value
-            const sum = color[0] + color[1] + color[2]
+            const sum = color.rgbSum()
             if (sum < darkestValue) {
                 darkestValue = sum
-                processedColors[0] = color
-                processedColors[1] = color
-                processedColors[2] = color
-                processedColors[3] = color
-                processedColors[4] = color
+                processedColors[0] = new Color(color.r, color.g, color.b)
+                processedColors[1] = new Color(color.r, color.g, color.b)
+                processedColors[2] = new Color(color.r, color.g, color.b)
+                processedColors[3] = new Color(color.r, color.g, color.b)
+                processedColors[4] = new Color(color.r, color.g, color.b)
             }
             //foreground color
             if(sum > lightestValue){
@@ -85,42 +86,53 @@ class ImagePaletteGenerator {
                 lightestIndex = index
             }
             //red, for errors
-            if (color[0] / (color[1] + color[2]) > redRatio) {
-                redRatio = color[0] / (color[1] + color[2])
+            if (color.r / (color.g + color.b) > redRatio) {
+                redRatio = color.r / (color.g + color.b)
                 redIndex = index
             }
         });
 
-        //now that we have our background color, we can check contrast
-        colors.forEach((color, index) => {
-            if(index === lightestIndex || index === redIndex) return
-            if(this.ccc.isLevelCustom(this.rgbToHex(color), this.rgbToHex(processedColors[0]), 3)){
-                contrastColors.push(color)
-            }
-        })
-
         //red
-        processedColors[8] = colors[redIndex]
+        processedColors[8] = new Color(colors[redIndex].r, colors[redIndex].g, colors[redIndex].b)
 
         //foreground colors
-        processedColors[5] = colors[lightestIndex]
-        processedColors[6] = colors[lightestIndex]
-        processedColors[7] = colors[lightestIndex]
-        processedColors[6] = this.adjustColor(processedColors[6], -50)
-        processedColors[5] = this.adjustColor(processedColors[6], -50)
+        processedColors[5] = new Color(colors[lightestIndex].r, colors[lightestIndex].g, colors[lightestIndex].b)
+        processedColors[6] = new Color(colors[lightestIndex].r, colors[lightestIndex].g, colors[lightestIndex].b)
+        processedColors[7] = new Color(colors[lightestIndex].r, colors[lightestIndex].g, colors[lightestIndex].b)
+        processedColors[6].adjustColor(-50)
+        processedColors[5].adjustColor(-50)
 
         //secondary shades
-        processedColors[1] = this.adjustColor(processedColors[0], 5)
-        processedColors[2] = this.adjustColor(processedColors[1], 15)
-        processedColors[3] = this.adjustColor(processedColors[2], 25)
-        processedColors[4] = this.adjustColor(processedColors[3], 25)
+        processedColors[1].adjustColor(5)
+        processedColors[2].adjustColor(15)
+        processedColors[3].adjustColor(25)
+        processedColors[4].adjustColor(25)
 
-        //start using contrast approved colors
-        contrastColors.forEach(color => {
-            if(processedColors.length < 16){
-                processedColors.push(color)
+        //colors 9-15 are based on contrast score
+        //now that we have a background color, we can compute contrast scores
+        colors.forEach((color) => {
+            color.computeContrast(processedColors[0])
+        })
+
+        colors.sort((a: Color, b: Color) => {
+            if(a.contrastScore > b.contrastScore){
+                return 1
+            }else if( a.contrastScore === b.contrastScore){
+                return 0
+            }else{
+                return -1
             }
         })
+
+        while(processedColors.length < 16){
+            let i = 0
+            processedColors.push(new Color(
+                colors[i].r,
+                colors[i].g,
+                colors[i].b
+            ))
+            i++
+        }
 
         return processedColors
     }

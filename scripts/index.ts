@@ -6,7 +6,8 @@ import ImagePaletteGenerator from './image-palette-generator'
 //build table
 export const colorTable = new ColorTable()
 if(window.location.hash){
-    colorTable.colors = window.location.hash.split(',')
+    //colorTable.colors = window.location.hash.split(',')
+    console.log("UNABLE TO LOAD COLORS FROM HASH")
 }
 colorTable.generateTable()
 
@@ -28,5 +29,6 @@ if(notepadPPExportBtn) notepadPPExportBtn.addEventListener('click', () => {
 
 const suggestBtn = document.getElementById('suggest-btn')
 if(suggestBtn) suggestBtn.addEventListener('click', () => {
-    colorTable.suggestColors()
+    // colorTable.suggestColors()
+    alert('not implemented')
 })

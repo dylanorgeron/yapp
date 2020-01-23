@@ -1,6 +1,7 @@
 import { saveAs } from 'file-saver'
+import { Color } from './color-utils';
 class NotepadPPTheme{
-    public exportTheme(colors: string[]){
+    public exportTheme(colors: Color[]){
         let XMLString = `
         <NotepadPlus>
         <LexerStyles>
@@ -752,7 +753,7 @@ class NotepadPPTheme{
 
         colors.forEach((color, index) => {
             const colorToReplace = index < 10 ? `color0${index}` : `color${index}`
-            XMLString = XMLString.replace(new RegExp(colorToReplace, 'g'), color.substr(1))
+            XMLString = XMLString.replace(new RegExp(colorToReplace, 'g'), color.hex.substr(1))
         });
         const blob = new Blob([XMLString], {type: 'text/plain'})
         saveAs(blob, 'Yapp-theme.xml')
