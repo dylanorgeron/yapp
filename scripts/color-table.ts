@@ -13,11 +13,19 @@ class ColorTable{
             });
             window.location.hash = hash
         } 
+        //build dots
+        const backgroundDots = document.getElementById('background-dots')
+        const foregroundDots = document.getElementById('foreground-dots')
+        const accentDots = document.getElementById('accent-dots')
+        let backgroundDotsHTML = ''
+        let foregroundDotsHTML = ''
+        let accentDotsHTML = ''
         //build table
         const table = document.getElementById('color-table')
         let tableCoreHtml = ``
         let tableHeaderHtml = `<div class="color-row color-header">`
         this.colors.forEach((bgColor, index) => {
+            //table
             tableHeaderHtml +=
                 `<div 
                 id="header-${index}"
@@ -34,7 +42,21 @@ class ColorTable{
                 )
             }
             tableCoreHtml += `</div>`
+            
+            //dots
+            if(index !== 0 && index <=4 && backgroundDots){
+                backgroundDotsHTML += `<div class='dot' style='background: ${bgColor.hex}'></div>`
+            }
+            if(index > 4 && index <= 7 && foregroundDots){
+                foregroundDotsHTML += `<div class='dot' style='background: ${bgColor.hex}'></div>`
+            }
+            if(index > 7 && accentDots){
+                accentDotsHTML += `<div class='dot' style='background: ${bgColor.hex}'></div>`
+            }
         })
+        if(backgroundDots) backgroundDots.innerHTML = backgroundDotsHTML
+        if(foregroundDots) foregroundDots.innerHTML = foregroundDotsHTML
+        if(accentDots) accentDots.innerHTML = accentDotsHTML
         tableHeaderHtml += `</div>`
         if (table){
             table.innerHTML = tableHeaderHtml + tableCoreHtml  
