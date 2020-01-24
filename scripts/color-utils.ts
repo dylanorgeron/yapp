@@ -13,8 +13,9 @@ class Color{
 
     public adjustColor(amount: number) {
         this.r = this.r + amount > 255 ? 255 : this.r + amount
-        this.b + amount > 255 ? 255 : this.b + amount
-        this.g + amount > 255 ? 255 : this.g + amount
+        this.b = this.b + amount > 255 ? 255 : this.b + amount
+        this.g = this.g + amount > 255 ? 255 : this.g + amount
+        this.updateHex()
     }
 
     public updateHex() {
@@ -24,8 +25,15 @@ class Color{
         }).join('')
     }
 
-    public hexToRgb(hex: string) {
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    public updateRGB(){
+        const rgb = this.hexToRgb()
+        this.r = rgb[0]
+        this.g = rgb[1]
+        this.b = rgb[2]
+    }
+
+    public hexToRgb() {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this.hex);
         return result ? [
         parseInt(result[1], 16),
         parseInt(result[2], 16),
@@ -38,13 +46,6 @@ class Color{
 
     public computeContrast(backgroundColor: Color){
         this.contrastScore = hex(this.hex, backgroundColor.hex)
-    }
-    public clone(c: Color){
-        this.r = c.r
-        this.g = c.g
-        this.b = c.b
-        this.contrastScore = c.contrastScore
-        this.hex = c.hex
     }
 }
 

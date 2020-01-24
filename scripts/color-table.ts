@@ -7,8 +7,9 @@ class ColorTable{
         //put colors in hash
         if(this.colors.length){
             let hash = ''
-            this.colors.forEach(c => {
-                hash += `${c.hex},`
+            this.colors.forEach((c, i) => {
+                hash += `${c.hex}`
+                if(i !== 15) hash += ','
             });
             window.location.hash = hash
         } 
@@ -26,10 +27,12 @@ class ColorTable{
                 </div><input style="display:none" type="color" id="input-${index}" value="${bgColor.hex}"/>`
             tableCoreHtml +=
                 `<div class="color-row" style='background: ${bgColor.hex}'>`
-            this.colors.forEach(fgColor =>
-                tableCoreHtml +=
-                `<div class="color-cell" style="color: ${fgColor.hex}">${fgColor.hex}</div>`
-            )
+            if(index < 5){
+                this.colors.forEach(fgColor =>
+                    tableCoreHtml +=
+                    `<div class="color-cell" style="color: ${fgColor.hex}">${fgColor.hex}</div>`
+                )
+            }
             tableCoreHtml += `</div>`
         })
         tableHeaderHtml += `</div>`

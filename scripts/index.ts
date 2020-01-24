@@ -2,14 +2,23 @@ import ColorTable from './color-table'
 import VSCodeTheme from './vs-code-theme'
 import NotepadPPTheme from './notepadpp-theme'
 import ImagePaletteGenerator from './image-palette-generator'
+import { Color } from './color-utils'
 
 //build table
 export const colorTable = new ColorTable()
 if(window.location.hash){
-    //colorTable.colors = window.location.hash.split(',')
-    console.log("UNABLE TO LOAD COLORS FROM HASH")
+    const hashColors = window.location.hash.split(',')
+    let colors: Color[] = []
+    hashColors.forEach(hashColor => {
+        const color = new Color()
+        color.hex = hashColor
+        color.updateRGB()
+        colors.push(color)
+    });
+    console.log(colors)
+    colorTable.colors = colors
+    colorTable.generateTable()
 }
-colorTable.generateTable()
 
 //image uploader
 const imagePaletteGenerator = new ImagePaletteGenerator()

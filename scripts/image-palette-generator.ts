@@ -36,10 +36,8 @@ class ImagePaletteGenerator {
             colors.push(new Color(c[0], c[1], c[2]))
         });
         //try and line the colors up
-        colors = this.sortColors(colors)
-        //convert rgb to hex
+        colorTable.colors = this.sortColors(colors)
         //update the table
-        colorTable.colors = colors
         colorTable.generateTable()
     }
 
@@ -64,6 +62,7 @@ class ImagePaletteGenerator {
         let processedColors: Color[] = []
         //lets sort dem colors
         let darkestValue = 1000
+        let darkestIndex = 0
         let redIndex = 0
         let redRatio = 0
         let lightestValue = 0
@@ -74,11 +73,7 @@ class ImagePaletteGenerator {
             const sum = color.rgbSum()
             if (sum < darkestValue) {
                 darkestValue = sum
-                processedColors[0] = new Color(color.r, color.g, color.b)
-                processedColors[1] = new Color(color.r, color.g, color.b)
-                processedColors[2] = new Color(color.r, color.g, color.b)
-                processedColors[3] = new Color(color.r, color.g, color.b)
-                processedColors[4] = new Color(color.r, color.g, color.b)
+                darkestIndex = index
             }
             //foreground color
             if(sum > lightestValue){
@@ -100,7 +95,14 @@ class ImagePaletteGenerator {
         processedColors[6] = new Color(colors[lightestIndex].r, colors[lightestIndex].g, colors[lightestIndex].b)
         processedColors[7] = new Color(colors[lightestIndex].r, colors[lightestIndex].g, colors[lightestIndex].b)
         processedColors[6].adjustColor(-50)
-        processedColors[5].adjustColor(-50)
+        processedColors[5].adjustColor(-100)
+        
+        //background
+        processedColors[0] = new Color(colors[darkestIndex].r, colors[darkestIndex].g, colors[darkestIndex].b)
+        processedColors[1] = new Color(colors[darkestIndex].r, colors[darkestIndex].g, colors[darkestIndex].b)
+        processedColors[2] = new Color(colors[darkestIndex].r, colors[darkestIndex].g, colors[darkestIndex].b)
+        processedColors[3] = new Color(colors[darkestIndex].r, colors[darkestIndex].g, colors[darkestIndex].b)
+        processedColors[4] = new Color(colors[darkestIndex].r, colors[darkestIndex].g, colors[darkestIndex].b)
 
         //secondary shades
         processedColors[1].adjustColor(5)
@@ -113,9 +115,10 @@ class ImagePaletteGenerator {
         colors.forEach((color) => {
             color.computeContrast(processedColors[0])
         })
+        console.log(colors)
 
         colors.sort((a: Color, b: Color) => {
-            if(a.contrastScore > b.contrastScore){
+            if(a.contrastScore < b.contrastScore){
                 return 1
             }else if( a.contrastScore === b.contrastScore){
                 return 0
@@ -124,13 +127,15 @@ class ImagePaletteGenerator {
             }
         })
 
+        let i = 0
         while(processedColors.length < 16){
-            let i = 0
-            processedColors.push(new Color(
-                colors[i].r,
-                colors[i].g,
-                colors[i].b
-            ))
+            if(i !== lightestIndex){
+                processedColors.push(new Color(
+                    colors[i].r,
+                    colors[i].g,
+                    colors[i].b
+                ))
+            }
             i++
         }
 
