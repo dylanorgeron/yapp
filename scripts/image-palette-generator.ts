@@ -105,10 +105,10 @@ class ImagePaletteGenerator {
         processedColors[4] = new Color(colors[darkestIndex].r, colors[darkestIndex].g, colors[darkestIndex].b)
 
         //secondary shades
-        processedColors[1].adjustColor(10)
-        processedColors[2].adjustColor(20)
-        processedColors[3].adjustColor(45)
-        processedColors[4].adjustColor(60)
+        processedColors[1].adjustColor(5)
+        processedColors[2].adjustColor(15)
+        processedColors[3].adjustColor(25)
+        processedColors[4].adjustColor(25)
 
         //colors 9-15 are based on contrast score
         //now that we have a background color, we can compute contrast scores

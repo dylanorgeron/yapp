@@ -41,9 +41,3 @@ if(suggestBtn) suggestBtn.addEventListener('click', () => {
     // colorTable.suggestColors()
     alert('not implemented')
 })
-
-const imageContainer = document.getElementById('image-container')
-if(imageContainer) imageContainer.addEventListener('click', () => {
-    const imageUploader = document.getElementById('image-uploader')
-    if(imageUploader) imageUploader.click()
-})
