@@ -57,6 +57,25 @@ class ColorTable{
             }
         }
     }
+
+    generatePanel(){
+        //put colors in hash
+        if(this.colors.length){
+            let hash = ''
+            this.colors.forEach((c, i) => {
+                hash += `${c.hex}`
+                if(i !== 15) hash += ','
+            });
+            window.location.hash = hash
+        } 
+        //build table
+        this.colors.forEach((color, index) => {
+            let colorEl = document.getElementById('color-sample-' +  index)
+            if(colorEl){
+                colorEl.style.backgroundColor = color.hex
+             }
+        })
+    }
 }
 
 export default ColorTable

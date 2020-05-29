@@ -6,21 +6,99 @@
 </head>
 
 <body>
-    <button id="vs-code-export-btn">VS Code</button>
-    <br>
-    <br>
-    <div>copy download to ~/.vscode/extensions</div>
-    <hr>
-    <input type="file" id="image-uploader">
-    <br>
-    <br>
-    <div id="image-container"></div>
-    <br>
-    <br>
-    <button id="suggest-btn">Suggest Colors</button>
-    <br>
-    <br>
-    <div id="color-table"></div>
+    <div id="color-panel">
+        <div id="image-container"></div>
+        <input type="file" id="image-uploader">
+        
+        <!-- <div id="color-table"></div> -->
+        <div id="colors">
+            <div id="color-0" class="color">
+                <div id="color-sample-0"class="color-sample"></div>
+                <div class="color-text">Default Background</div>
+            </div>
+            <div id="color-1" class="color">
+                <div id="color-sample-1"class="color-sample"></div>
+                <div class="color-text">Lighter Background</div>
+            </div>
+            <div id="color-2" class="color">
+                <div id="color-sample-2"class="color-sample"></div>
+                <div class="color-text">Selection Background</div>
+            </div>
+            <br>
+            <div id="color-3" class="color">
+                <div id="color-sample-3"class="color-sample"></div>
+                <div class="color-text">Comments, Line Highlighting</div>
+            </div>
+            <div id="color-4" class="color">
+                <div id="color-sample-4"class="color-sample"></div>
+                <div class="color-text">Dark Foreground (Status Bars)</div>
+            </div>
+            <div id="color-5" class="color">
+                <div id="color-sample-5"class="color-sample"></div>
+                <div class="color-text">Default Foreground</div>
+            </div>
+            <div id="color-6" class="color">
+                <div id="color-sample-6"class="color-sample"></div>
+                <div class="color-text">Light Foreground</div>
+            </div>
+            <div id="color-7" class="color">
+                <div id="color-sample-7"class="color-sample"></div>
+                <div class="color-text">Light Background</div>
+            </div>
+            <div id="color-8" class="color">
+                <div id="color-sample-8"class="color-sample"></div>
+                <div class="color-text">Red</div>
+            </div>
+            <div id="color-9" class="color">
+                <div id="color-sample-9"class="color-sample"></div>
+                <div class="color-text">Orange</div>
+            </div>
+            <div id="color-10" class="color">
+                <div id="color-sample-10"class="color-sample"></div>
+                <div class="color-text">Yellow</div>
+            </div>
+            <div id="color-11" class="color">
+                <div id="color-sample-11"class="color-sample"></div>
+                <div class="color-text">Green</div>
+            </div>
+            <div id="color-12" class="color">
+                <div id="color-sample-12"class="color-sample"></div>
+                <div class="color-text">Cyan</div>
+            </div>
+            <div id="color-13" class="color">
+                <div id="color-sample-13"class="color-sample"></div>
+                <div class="color-text">Blue</div>
+            </div>
+            <div id="color-14" class="color">
+                <div id="color-sample-14"class="color-sample"></div>
+                <div class="color-text">Violet</div>
+            </div>
+            <div id="color-15" class="color">
+                <div id="color-sample-15"class="color-sample"></div>
+                <div class="color-text">Brown</div>
+            </div>
+        </div>
+        
+        
+        <div id="download-controls">
+            <button id="vs-code-export-btn">VS Code</button>
+            <div>copy download to ~/.vscode/extensions</div>
+        </div>
+    </div>
+
+
+    <div id="vs-code-preview">
+        <div id="top-nav">
+            <span class="nav-option">File</span>
+            <span class="nav-option">Edit</span>
+            <span class="nav-option">Selection</span>
+            <span class="nav-option">View</span>
+            <span class="nav-option">Go</span>
+            <span class="nav-option">Debug</span>
+            <span class="nav-option">Terminal</span>
+            <span class="nav-option">Help</span>
+        </div>
+    </div>
 </body>
 <script src="scripts/index.ts"></script>
 

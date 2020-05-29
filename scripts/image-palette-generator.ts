@@ -38,7 +38,8 @@ class ImagePaletteGenerator {
         //try and line the colors up
         colorTable.colors = this.sortColors(colors)
         //update the table
-        colorTable.generateTable()
+        // colorTable.generateTable()
+        colorTable.generatePanel()
     }
 
     convertColorsToHex(colors: []) {

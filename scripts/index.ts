@@ -17,7 +17,8 @@ if(window.location.hash){
     });
     console.log(colors)
     colorTable.colors = colors
-    colorTable.generateTable()
+    // colorTable.generateTable()
+    colorTable.generatePanel()
 }
 
 //image uploader
@@ -40,4 +41,10 @@ const suggestBtn = document.getElementById('suggest-btn')
 if(suggestBtn) suggestBtn.addEventListener('click', () => {
     // colorTable.suggestColors()
     alert('not implemented')
+})
+
+const imageContainer = document.getElementById('image-container')
+if(imageContainer) imageContainer.addEventListener('click', () => {
+    const imageUploader = document.getElementById('image-uploader')
+    if(imageUploader) imageUploader.click()
 })
