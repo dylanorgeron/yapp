@@ -110,7 +110,7 @@ class ImagePaletteGenerator {
         //secondary shades
         processedColors[1].adjustColor(5)
         processedColors[2].adjustColor(15)
-        processedColors[3].adjustColor(25)
+        processedColors[3].adjustColor(50)
         processedColors[4].adjustColor(25)
 
         //colors 9-15 are based on contrast score
