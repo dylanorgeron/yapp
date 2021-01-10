@@ -40,6 +40,8 @@ class ImagePaletteGenerator {
         //update the table
         // colorTable.generateTable()
         colorTable.generatePanel()
+        //set the colors for the preview
+        colorTable.updatePreview()
     }
 
     convertColorsToHex(colors: []) {
@@ -139,6 +141,22 @@ class ImagePaletteGenerator {
             }
             i++
         }
+        //refactor this later
+        processedColors[0].name = 'background-default'
+        processedColors[1].name = 'background-lighter'
+        processedColors[2].name = 'background-selection'
+        processedColors[3].name = 'foreground-comments'
+        processedColors[4].name = 'background-selection'
+        processedColors[5].name = 'foreground-default'
+        processedColors[6].name = 'foreground-light'
+        processedColors[8].name = 'red'
+        processedColors[9].name = 'orange'
+        processedColors[10].name = 'yellow'
+        processedColors[11].name = 'green'
+        processedColors[12].name = 'cyan'
+        processedColors[13].name = 'blue'
+        processedColors[14].name = 'violet'
+        processedColors[15].name = 'brown'
 
         return processedColors
     }

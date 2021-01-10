@@ -1,12 +1,58 @@
+:root{
+    --background-default: #1E1E1E;
+    --background-lighter: #252526;
+    --background-selection: #333333;
+    --background-light: #333333;
+    --comments: #333333;
+    --foreground-comments: #dddddd;
+    --foreground-default: #CCCCCC;
+    --foreground-light: #CCCCCC;
+    --foreground-red: red;
+    --foreground-orange: orange;
+    --foreground-yellow: yellow;
+    --foreground-green: green;
+    --foreground-cyan: cyan;
+    --foreground-blue: blue;
+    --foreground-violet: violet;
+    --foreground-brown: brown;
+}
+
+/**********/
+/* Colors */
+/**********/
+.background-default{ background-color: var(--background-default)}
+.background-lighter{ background-color: var(--background-lighter)}
+.background-selection{ background-color: var(--background-selection)}
+.background-light{ background-color: var(--background-light)}
+.foreground-default{ color: var(--foreground-default) }
+.red{ color: var(--foreground-red) }
+.orange{ color: var(--foreground-orange) }
+.yellow{ color: var(--foreground-yellow) }
+.green{ color: var(--foreground-green) }
+.cyan{ color: var(--foreground-cyan) }
+.blue{ color: var(--foreground-blue) }
+.violet{ color: var(--foreground-violet) }
+.brown{ color: var(--foreground-brown) }
+
+
+/*************/
+/* Big Areas */
+/*************/
 html, body{
     overflow: hidden;
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 #vs-code-preview{
     border: 1px solid black;
     height: 100%;
+    width: calc(100% - 300px);
 }
+
+/****************/
+/* Color Picker */
+/****************/
 #color-panel{
     width:300px;
     border: 1px solid black;
@@ -16,18 +62,6 @@ html, body{
     color: #b0b0b0;
     font-family: sans-serif;
 }
-
-#image-container{
-    height: 300px;
-    width: 300px;
-    background: #eee;
-    cursor: pointer;
-}
-
-
-/***************/
-/* Color Panel */
-/***************/
 #colors{ padding: 15px;}
 #colors .color {
     position: relative;
@@ -47,31 +81,113 @@ html, body{
     top: 5;
     left: 35px;
 }
-
-
 #image-uploader{ display: none;}
-
+#image-container{
+    height: 300px;
+    width: 300px;
+    background: #eee;
+    cursor: pointer;
+}
+#image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
 #download-controls{
     padding: 15px;
 }
 
+/*******************/
+/* VS Code Preview */
+/*******************/
+#top-nav .nav-option{
+    padding: 5px 8px;
+    cursor: default;
+    display: inline-block;
+}
+
+#side-nav{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 50px;
+    text-align: center;
+    height: 100%;
+}
+#side-nav .side-icon{
+    height: 35px;
+    padding-top: 20px;
+}
+
+#explorer{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    height: 100%;
+    width: 200px;
+    font-size: .9em;
+}
+#explorer-heading{
+    text-transform: uppercase;
+    font-size: .7em;
+    padding: 10px;
+}
+.directory-list{
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+.tree .tree-heading{
+    padding: 2px 10px;
+}
+.tree .directory{
+    padding: 2px 20px;
+}
+
+
+#code-editor{
+    height: 100%;
+    width: calc(100% - 249px);
+    margin-left: 249px;
+}
+#tab-container .tab{
+    display: inline-block;
+    padding: 8px 16px;
+}
+#breadcrumb{
+    font-size: .9em;
+    padding: 2px 15px;
+    box-shadow: 0px 1px 5px #00000060;
+}
+#line-numbers{
+    font-size: 15px;
+    font-family: 'Consolas', Courier, monospace;
+    width: 40px;
+    text-align: right;
+    float: left;
+    padding-right: 10px;
+}
+#line-numbers .line-number{
+    line-height: 18px;
+}
+
+#code{
+    font-family: 'Consolas', Courier, monospace;
+    margin-left: 40px;
+    color: var(--foreground-default);
+    font-size: 15px;
+    line-height: 18px;
+}
+.indent-level{
+    padding-left: 25px;
+}
+.break{
+    height: 18px;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/***************/
+/* Color Table */
+/***************/
 #color-table{
     font-family: consolas;
     display: inline;
@@ -87,11 +203,4 @@ html, body{
 }
 .color-header .color-cell{
     cursor: pointer;
-}
-
-#image-container{
-    height: 200px;
-}
-#image-container > img{
-    height: 100%;
 }

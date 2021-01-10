@@ -1,7 +1,8 @@
 import { hex } from 'wcag-contrast'
 
 class Color{
-    public hex:string = ''
+    public name: string = 'violet'
+    public hex: string = ''
     public contrastScore:number = 0
     constructor(
         public r: number = 0,
