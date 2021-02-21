@@ -3,7 +3,7 @@ import { saveAs } from 'file-saver'
 
 import Package from './vs-code-package'
 import ColorTheme from './vs-code-color-theme'
-import { Color } from './color-utils'
+import { Color } from '../color'
 
 class VSCodeTheme{
     public exportTheme(colors: Color[]){

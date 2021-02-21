@@ -1,11 +1,11 @@
-import ColorTable from './color-table'
-import VSCodeTheme from './vs-code-theme'
-import NotepadPPTheme from './notepadpp-theme'
+import ColorList from './color-list'
+import VSCodeTheme from './themes/vs-code-theme'
+import NotepadPPTheme from './themes/notepadpp-theme'
 import ImagePaletteGenerator from './image-palette-generator'
-import { Color } from './color-utils'
+import { Color } from './color'
 
 //build table
-export const colorTable = new ColorTable()
+export const colorList = new ColorList()
 if(window.location.hash){
     let colors: Color[] = []
     //set colors from hash
@@ -16,6 +16,7 @@ if(window.location.hash){
         color.updateRGB()
         colors.push(color)
     });
+    console.log(colors)
 
     //set color names. this should eventually be refactored
     colors[0].name = 'background-default'
@@ -33,12 +34,12 @@ if(window.location.hash){
     colors[13].name = 'blue'
     colors[14].name = 'violet'
     colors[15].name = 'brown'
-    colorTable.colors = colors
+    colorList.colors = colors
     
     //build color panel
-    colorTable.generatePanel()
+    colorList.generatePanel()
     //update vscode preview with colors
-    colorTable.updatePreview()
+    colorList.updatePreview()
 }
 
 //image uploader
@@ -49,13 +50,13 @@ const imagePaletteGenerator = new ImagePaletteGenerator()
 const vsCodeTheme = new VSCodeTheme()
 const vsCodeExportBtn = document.getElementById('vs-code-export-btn')
 if(vsCodeExportBtn) vsCodeExportBtn.addEventListener('click', () => {
-    vsCodeTheme.exportTheme(colorTable.colors)
+    vsCodeTheme.exportTheme(colorList.colors)
 })
 //export notepad++
 const notepadppTheme = new NotepadPPTheme()
 const notepadPPExportBtn = document.getElementById('notepadpp-export-btn')
 if(notepadPPExportBtn) notepadPPExportBtn.addEventListener('click', () => {
-    notepadppTheme.exportTheme(colorTable.colors)
+    notepadppTheme.exportTheme(colorList.colors)
 })
 //suggest colors
 const suggestBtn = document.getElementById('suggest-btn')

@@ -1,5 +1,5 @@
 import { saveAs } from 'file-saver'
-import { Color } from './color-utils';
+import { Color } from '../color';
 class NotepadPPTheme{
     public exportTheme(colors: Color[]){
         let XMLString = `

@@ -1,6 +1,6 @@
 import ColorThief from 'colorthief'
-import { colorTable } from './index'
-import { Color } from './color-utils'
+import { colorList } from './index'
+import { Color } from './color'
 
 class ImagePaletteGenerator {
     private colorThief = new ColorThief()
@@ -36,12 +36,12 @@ class ImagePaletteGenerator {
             colors.push(new Color(c[0], c[1], c[2]))
         });
         //try and line the colors up
-        colorTable.colors = this.sortColors(colors)
+        colorList.colors = this.sortColors(colors)
         //update the table
         // colorTable.generateTable()
-        colorTable.generatePanel()
+        colorList.generatePanel()
         //set the colors for the preview
-        colorTable.updatePreview()
+        colorList.updatePreview()
     }
 
     convertColorsToHex(colors: []) {
