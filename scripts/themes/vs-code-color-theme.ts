@@ -499,19 +499,19 @@ class VSCodeColorTheme {
 		{
 			"scope": "meta.import",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color06"
 			}
 		},
 		{
 			"scope": "source.ts",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color06"
 			}
 		},
 		{
 			"scope": "meta.function-call",
 			"settings": {
-				"foreground": "color04"
+				"foreground": "color06"
 			}
 		},
 		{
