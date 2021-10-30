@@ -2,6 +2,6 @@
 
 Yet Another Pallet Picker
 
-[Demo][]
+![alt text](https://i.imgur.com/baT2tM3.png)
 
-[demo]: https://dylanorgeron.github.io/yapp
+https://dylanorgeron.github.io/yapp
