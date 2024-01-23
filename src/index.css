@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    @apply
+    bg-slate-800
+}
+
+h1{
+    @apply
+    text-4xl
+    mb-6
+}
