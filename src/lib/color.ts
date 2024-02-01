@@ -55,7 +55,7 @@ const colorKeys = [
     'background-lighter',
     'background-selection',
     'foreground-comments',
-    'background-selection',
+    'foreground-selection',
     'foreground-default',
     'foreground-light',
     'red',
@@ -66,6 +66,8 @@ const colorKeys = [
     'blue',
     'violet',
     'brown',
+    'black',
+    'white'
 ]
 
 export { Color, colorKeys }

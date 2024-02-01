@@ -111,7 +111,7 @@ const sortColors = (colors: Color[]) => {
         colors[i].r,
         colors[i].g,
         colors[i].b,
-        colorKeys[i]
+        colorKeys[i + 9]
       ))
     }
     i++
