@@ -61,7 +61,7 @@ export default function ImageInput({ onColorsChange, isProcessing, setIsProcessi
         ref={fileUploaderRef}
         onChange={onInputChange}
       />
-      {!imgSrc && <div className="py-16">+</div>}
+      {!imgSrc && <div className="py-16 text-slate-600">+</div>}
       {imgSrc && <img src={imgSrc} ref={imageRef} alt="Image the user uploads to be processed into a color theme." />}
       <div className="
         bg-white

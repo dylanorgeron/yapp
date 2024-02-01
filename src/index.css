@@ -12,3 +12,9 @@ h1{
     text-4xl
     mb-6
 }
+
+h3{
+    @apply
+    text-2xl
+    mb-2
+}
