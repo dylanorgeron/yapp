@@ -52,11 +52,12 @@ class Color{
 
 const colorKeys = [
     'background-default',
-    'background-lighter',
     'background-selection',
-    'foreground-comments',
-    'foreground-selection',
+    'background-light',
+    'background-lighter',
     'foreground-default',
+    'foreground-comments',
+    'foreground-dark',
     'foreground-light',
     'red',
     'orange',
@@ -66,7 +67,6 @@ const colorKeys = [
     'blue',
     'violet',
     'brown',
-    'black',
 ]
 
 export { Color, colorKeys }
