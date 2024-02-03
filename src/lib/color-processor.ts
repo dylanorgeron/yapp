@@ -105,13 +105,15 @@ const sortColors = (colors: Color[]) => {
   })
 
   let i = 0
+  const startLen = processedColors.length
   while (processedColors.length < 16) {
     if (i !== lightestIndex) {
+      const key = colorKeys[i + startLen - 1]
       processedColors.push(new Color(
         colors[i].r,
         colors[i].g,
         colors[i].b,
-        colorKeys[i + 9]
+        key
       ))
     }
     i++

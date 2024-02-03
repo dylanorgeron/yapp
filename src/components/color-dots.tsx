@@ -5,8 +5,12 @@ type props = {
 }
 export default function ColorDots({ colors }: props) {
   return (
-    <div className="flex justify-between mt-5">{colors.map(c => (
-      <div key={c.key} className="w-[35px] h-[35px] rounded-full inline-block" style={{'backgroundColor': c.hex}}></div>
+    <div className="mt-5">{colors.map(c => (
+      <div>
+        <div key={c.key} className="w-[35px] h-[35px] rounded-full inline-block" style={{'backgroundColor': c.hex}}></div>
+        <span>{c.key}</span>
+        <hr />
+      </div>
     ))}</div>
   )
 }

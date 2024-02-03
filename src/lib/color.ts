@@ -67,7 +67,6 @@ const colorKeys = [
     'violet',
     'brown',
     'black',
-    'white'
 ]
 
 export { Color, colorKeys }
