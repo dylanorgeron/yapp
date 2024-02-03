@@ -1,13 +1,13 @@
 import { hex } from 'wcag-contrast'
 
 class Color{
-    public name: string = 'violet'
     public hex: string = ''
     public contrastScore:number = 0
     constructor(
         public r: number = 0,
         public g: number = 0,
-        public b:number = 0
+        public b:number = 0,
+        public key: string = ''
     ){
         this.updateHex()
     }
@@ -50,4 +50,23 @@ class Color{
     }
 }
 
-export { Color }
+const colorKeys = [
+    'background-default',
+    'background-selection',
+    'background-light',
+    'background-lighter',
+    'foreground-default',
+    'foreground-comments',
+    'foreground-dark',
+    'foreground-light',
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'cyan',
+    'blue',
+    'violet',
+    'brown',
+]
+
+export { Color, colorKeys }
