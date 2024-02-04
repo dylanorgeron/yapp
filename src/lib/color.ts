@@ -25,6 +25,18 @@ class Color {
     return val;
   }
 
+  public setHex(newHex: string) {
+    this.hex = newHex;
+    this.updateRGB();
+  }
+
+  public setRGB(newRGB: number[]) {
+    this.r = newRGB[0];
+    this.g = newRGB[1];
+    this.b = newRGB[2];
+    this.updateHex();
+  }
+
   public updateHex() {
     this.hex =
       "#" +

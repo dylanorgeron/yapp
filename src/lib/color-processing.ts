@@ -174,15 +174,11 @@ const updateBackgroundColors = (newHex: string, colors: Color[], i: number) => {
       offset = -45;
       break;
   }
-  colors[0].hex = newHex;
-  colors[0].updateRGB();
+  colors[0].setHex(newHex);
   colors[0].adjustColor(offset);
-  colors[1].hex = colors[0].hex;
-  colors[2].hex = colors[0].hex;
-  colors[3].hex = colors[0].hex;
-  colors[1].updateRGB();
-  colors[2].updateRGB();
-  colors[3].updateRGB();
+  colors[1].setHex(colors[0].hex);
+  colors[2].setHex(colors[0].hex);
+  colors[3].setHex(colors[0].hex);
   colors[1].adjustColor(5);
   colors[2].adjustColor(25);
   colors[3].adjustColor(45);
@@ -201,15 +197,11 @@ const updateForegroundColors = (newHex: string, colors: Color[], i: number) => {
       offset = -25;
       break;
   }
-  colors[4].hex = newHex;
-  colors[4].updateRGB();
+  colors[4].setHex(newHex);
   colors[4].adjustColor(offset);
-  colors[5].hex = colors[4].hex;
-  colors[6].hex = colors[4].hex;
-  colors[7].hex = colors[4].hex;
-  colors[5].updateRGB();
-  colors[6].updateRGB();
-  colors[7].updateRGB();
+  colors[5].setHex(colors[4].hex);
+  colors[6].setHex(colors[4].hex);
+  colors[7].setHex(colors[4].hex);
   colors[5].adjustColor(-25);
   colors[6].adjustColor(-50);
   colors[7].adjustColor(25);

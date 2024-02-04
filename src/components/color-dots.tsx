@@ -25,8 +25,7 @@ export default function ColorDots({ colors, setColors }: props) {
     } else if (4 <= i && i < 8 && lockForegroundColors) {
       updateForegroundColors(newHex, newArray, i);
     } else {
-      newArray[i].hex = newHex;
-      newArray[i].updateRGB();
+      newArray[i].setHex(newHex);
     }
     setColors(newArray);
   };
