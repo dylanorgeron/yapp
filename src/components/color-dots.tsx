@@ -19,12 +19,14 @@ export default function ColorDots({ colors, setColors }: props) {
 
   const onColorChange = (e: React.ChangeEvent<HTMLInputElement>, i: number) => {
     let newArray = [...colors];
-    newArray[i].hex = e.target.value;
-    newArray[i].updateRGB();
+    const newHex = e.target.value;
     if (i < 4 && lockBackgroundColors) {
-      updateBackgroundColors(newArray, i);
+      updateBackgroundColors(newHex, newArray, i);
     } else if (4 <= i && i < 8 && lockForegroundColors) {
-      updateForegroundColors(newArray, i);
+      updateForegroundColors(newHex, newArray, i);
+    } else {
+      newArray[i].hex = newHex;
+      newArray[i].updateRGB();
     }
     setColors(newArray);
   };

@@ -161,7 +161,7 @@ const sortColors = (colors: Color[]) => {
   return processedColors;
 };
 
-const updateBackgroundColors = (colors: Color[], i: number) => {
+const updateBackgroundColors = (newHex: string, colors: Color[], i: number) => {
   let offset = 0;
   switch (i) {
     case 1:
@@ -174,6 +174,8 @@ const updateBackgroundColors = (colors: Color[], i: number) => {
       offset = -45;
       break;
   }
+  colors[0].hex = newHex;
+  colors[0].updateRGB();
   colors[0].adjustColor(offset);
   colors[1].hex = colors[0].hex;
   colors[2].hex = colors[0].hex;
@@ -186,7 +188,7 @@ const updateBackgroundColors = (colors: Color[], i: number) => {
   colors[3].adjustColor(45);
 };
 
-const updateForegroundColors = (colors: Color[], i: number) => {
+const updateForegroundColors = (newHex: string, colors: Color[], i: number) => {
   let offset = 0;
   switch (i) {
     case 4:
@@ -199,6 +201,8 @@ const updateForegroundColors = (colors: Color[], i: number) => {
       offset = -25;
       break;
   }
+  colors[4].hex = newHex;
+  colors[4].updateRGB();
   colors[4].adjustColor(offset);
   colors[5].hex = colors[4].hex;
   colors[6].hex = colors[4].hex;
